@@ -1,0 +1,15 @@
+h1 {
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: red;
+    border: 2px solid violet;width: 30%;
+}
+
+p {
+    margin-top: 0px;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0, 15);
+    color: blueviolet;
+}
