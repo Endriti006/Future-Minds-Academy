@@ -13,3 +13,12 @@ p {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0, 15);
     color: blueviolet;
 }
+
+h2 {
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: aqua;
+    width: 35%;
+    border-bottom: 2px solid black;
+    padding-left: 10px;
+}
