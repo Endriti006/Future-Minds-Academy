@@ -1,0 +1,9 @@
+img {
+    background-image: url(Image/tree-736885_1280.jpg); 
+    opacity: 0.5;
+
+}
+  
+body{
+    background-color: rgba(214, 61, 108, 0.8); /* pink with 80% opacity */
+  }
