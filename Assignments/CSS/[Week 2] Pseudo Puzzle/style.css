@@ -1,0 +1,11 @@
+p:hover {
+    background-color: yellow;
+}
+
+p::first-letter {
+    font-size: 1em;
+}
+
+p:hover::first-letter {
+    font-size: 2em;
+}
