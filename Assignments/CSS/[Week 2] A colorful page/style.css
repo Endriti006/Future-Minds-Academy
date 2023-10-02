@@ -1,9 +1,12 @@
-img {
-    background-image: url(Image/tree-736885_1280.jpg); 
+body {
+    background-image: url('Image/Tree.jpg');
     opacity: 0.5;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
-  
-body{
-    background-color: rgba(214, 61, 108, 0.8); /* pink with 80% opacity */
-  }
+
+main {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5));
+    padding: 20px;
+}
