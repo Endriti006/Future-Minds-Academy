@@ -1,0 +1,35 @@
+.box {
+    margin-top: 50px;
+    position: relative;
+    width: 500px;
+    border: 1px solid black;
+    margin-bottom: 20px; 
+    box-shadow:10px 10px 10px purple;
+  }
+  
+  .title {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    bottom: 40px;
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20px;
+  }
+
+  .video-box {
+    position: fixed;
+    bottom: 50px;
+    left: 1390px; 
+    width: 100%;
+    height: 100px;
+  }
+
+
+
+
+  
