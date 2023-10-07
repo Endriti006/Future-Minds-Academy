@@ -1,11 +1,14 @@
 body {
     background-image: url('Image/Tree.jpg');
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-main {
-    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5));
+h1{
+    color: red;
+}
+p {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.7), rgba(255, 255, 0, 0.7));
     padding: 20px;
 }
+
