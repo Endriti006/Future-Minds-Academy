@@ -4,11 +4,13 @@ p {
     border-radius: 10%;
     margin-top: 10px;
     margin-left: 20px;
+
 }
 
 img {
     width: 150px;
     float: left;
+    border: 1px solid black;
 }
 
 img:hover {
@@ -16,5 +18,7 @@ img:hover {
     width: 160px;
     margin-left: 10px;
     cursor: pointer;
+    border: 2px  dashed  red;
+    padding: 10px;
 }
 
