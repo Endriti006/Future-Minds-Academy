@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -9,7 +10,6 @@ h1 {
 
 p {
     font-size: 1.2em;
-
 }
 
 section:nth-child(odd) {
@@ -23,6 +23,7 @@ section:nth-child(even) {
 section {
     height: 25vh;
     margin: 0;
+    padding: 0;
 }
 
 hr {
