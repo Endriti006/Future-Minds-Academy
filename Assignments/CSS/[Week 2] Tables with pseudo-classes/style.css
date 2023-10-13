@@ -1,11 +1,14 @@
 tr:nth-child(odd) {
     background-color: greenyellow;
+    border-bottom: 1px solid white;
     
   }
   
 tr:nth-child(even) {
     background-color: green;
+    border-bottom: 1px solid white;
   }
+
 td{
     color: white;
 }
@@ -14,4 +17,5 @@ table {
     width: 500px;
     height: 400px;
     font-size: large;
+    border-collapse: collapse;
   }
