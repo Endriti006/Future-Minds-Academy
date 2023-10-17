@@ -1,0 +1,260 @@
+body {
+    background-image: url('Images/background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 0 200px 0 200px;
+    cursor: url('Images/icons-cursor.png')10 10, auto;
+}
+
+
+
+.navigation a {
+    display: block;
+    color: black;
+    border: 2px solid grey;
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgb(98, 179, 223);
+    cursor: url('Images/icons-cursor.png')10 10, auto;
+}
+
+.navigation span {
+    display: inline-block;
+}
+
+.navigation li {
+    display: block;
+    list-style-type: none;
+    float: left;
+    margin-right: 20px;
+    padding: 0px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+    left: 33%;
+}
+
+.navigation a:hover {
+    box-shadow: #f2f2f2;
+    box-shadow: 5px 5px 20px rgba(15, 46, 109, 0.5);
+    border: 1px solid;
+}
+
+#Portfolio {
+    display: block;
+    text-align: center;
+    border: 2px solid grey;
+    border-radius: 10%;
+    padding: 10px;
+    margin-top: 50px;
+    background-color: rgb(29, 207, 207);
+}
+
+#Portfolio:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+#Portfolio img:hover {
+    box-shadow: #f2f2f2;
+    box-shadow: 5px 5px 20px rgba(112, 111, 111, 0.5);
+    border: 10 px solid;
+    width: 350px;
+    height: 350px;
+}
+
+#education {
+    display: block;
+    margin-top: 10px;
+    border: 2px solid grey;
+    border-radius: 25px;
+    margin-top: 50px;
+    background-color: rgb(29, 207, 207);
+}
+
+#education:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+.list {
+    display: block;
+    margin-top: 40px;
+    background-color: rgb(10, 96, 143);
+    border: 2pxs solid grey;
+    border-radius: 25px;
+    align-items: left;
+    justify-items: left;
+    text-align: left;
+    padding: 20px;
+    margin-right: 30px;
+}
+
+#skills {
+    margin-top: 50px;
+    display: block;
+    border: 2px solid grey;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgb(29, 207, 207);
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+#skills:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+#projects {
+    margin-top: 50px;
+    border: 2px solid grey;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgb(29, 207, 207);
+    text-align: left;
+}
+
+#projects:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+button,
+project1 {
+    background-color: blue;
+    color: black;
+    border: none;
+    border-radius: 10%;
+    position: relative;
+    top: -10px;
+    left: 15px;
+    cursor: url('Images/icons-cursor.png')10 10, auto;
+
+}
+
+
+#footer {
+    display: block;
+    color: black;
+    background-color: rgb(89, 56, 56);
+    border-radius: 25%;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: rgb(29, 207, 207);
+}
+
+#footer:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+/*My Projects */
+
+#Project1 {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 10%;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#Project1 a {
+    padding: 0px;
+}
+
+#Project1:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+#Project2 {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 10%;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#Project2 a {
+    padding: 0px;
+}
+
+#Project2:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+#Project3 {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 10%;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+#Project3 a {
+    padding: 0px;
+}
+
+#Project3:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+/*Contact ME! */
+
+#Message {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 10%;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(29, 207, 207);
+}
+
+#Message:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
+
+input,
+textarea {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+
+
+#SocialMedia {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 10%;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(29, 207, 207);
+}
+
+#SocialMedia:hover {
+    transform: scale(1, 1);
+    border: 3px solid gray;
+    background-color: rgb(22, 151, 151);
+}
