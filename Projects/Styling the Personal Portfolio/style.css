@@ -6,7 +6,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     padding: 0 200px 0 200px;
-    cursor: url('Images/icons-cursor.png')10 10, auto;
+    cursor: url('Images/icons-cursor.png') 5 5, auto;
 }
 
 
@@ -20,7 +20,14 @@ body {
     width: 150px;
     border-radius: 10px;
     background-color: rgb(98, 179, 223);
-    cursor: url('Images/icons-cursor.png')10 10, auto;
+}
+
+a{
+    cursor: url('Images/icons-cursor.png') 5 5, auto;
+}
+
+button{
+    cursor: url('Images/icons-cursor.png') 5 5, auto;
 }
 
 .navigation span {
