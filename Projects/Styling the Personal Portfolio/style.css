@@ -1,6 +1,7 @@
-*{
+* {
     cursor: url('Images/icons-cursor.png') 5 5, auto;
 }
+
 body {
     background-image: url('Images/background-image.jpg');
     background-size: cover;
@@ -11,6 +12,20 @@ body {
     padding: 0 200px 0 200px;
 }
 
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation li {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    padding: 10px;
+    float: left;
+}
 
 .navigation a {
     display: block;
@@ -21,31 +36,20 @@ body {
     width: 150px;
     border-radius: 10px;
     background-color: rgb(98, 179, 223);
+    text-align: center;
 }
 
 .navigation span {
     display: inline-block;
-}
-
-.navigation li {
-    display: block;
-    list-style-type: none;
-    float: left;
-    margin-right: 20px;
-    padding: 0px;
-    margin-bottom: 20px;
-    position: relative;
-    top: 10px;
-    left: 33%;
+    vertical-align: middle;
 }
 
 .navigation a:hover {
-    box-shadow: #f2f2f2;
     box-shadow: 5px 5px 20px rgba(15, 46, 109, 0.5);
     border: 1px solid;
 }
 
-.blocks{
+.blocks {
     padding: 10px;
     margin-top: 50px;
     background-color: rgb(29, 207, 207);
@@ -131,7 +135,7 @@ project1 {
     left: 15px;
 }
 
-button project1:hover{
+button project1:hover {
     background-color: red;
 }
 
