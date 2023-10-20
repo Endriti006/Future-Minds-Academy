@@ -1,3 +1,6 @@
+*{
+    cursor: url('Images/icons-cursor.png') 5 5, auto;
+}
 body {
     background-image: url('Images/background-image.jpg');
     background-size: cover;
@@ -6,9 +9,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     padding: 0 200px 0 200px;
-    cursor: url('Images/icons-cursor.png') 5 5, auto;
 }
-
 
 
 .navigation a {
@@ -20,14 +21,6 @@ body {
     width: 150px;
     border-radius: 10px;
     background-color: rgb(98, 179, 223);
-}
-
-a{
-    cursor: url('Images/icons-cursor.png') 5 5, auto;
-}
-
-button{
-    cursor: url('Images/icons-cursor.png') 5 5, auto;
 }
 
 .navigation span {
@@ -52,14 +45,17 @@ button{
     border: 1px solid;
 }
 
-#Portfolio {
-    display: block;
-    text-align: center;
-    border: 2px solid grey;
-    border-radius: 10%;
+.blocks{
     padding: 10px;
     margin-top: 50px;
     background-color: rgb(29, 207, 207);
+    border-radius: 25px;
+    border: 2px solid grey;
+}
+
+#Portfolio {
+    display: block;
+    text-align: center;
 }
 
 #Portfolio:hover {
@@ -79,10 +75,6 @@ button{
 #education {
     display: block;
     margin-top: 10px;
-    border: 2px solid grey;
-    border-radius: 25px;
-    margin-top: 50px;
-    background-color: rgb(29, 207, 207);
 }
 
 #education:hover {
@@ -100,17 +92,12 @@ button{
     align-items: left;
     justify-items: left;
     text-align: left;
-    padding: 20px;
-
+    padding: 10px;
 }
 
 #skills {
     margin-top: 50px;
     display: block;
-    border: 2px solid grey;
-    border-radius: 25px;
-    padding: 10px;
-    background-color: rgb(29, 207, 207);
 }
 
 .table {
@@ -124,11 +111,6 @@ button{
 }
 
 #projects {
-    margin-top: 50px;
-    border: 2px solid grey;
-    border-radius: 25px;
-    padding: 10px;
-    background-color: rgb(29, 207, 207);
     text-align: left;
 }
 
@@ -147,19 +129,15 @@ project1 {
     position: relative;
     top: -10px;
     left: 15px;
-    cursor: url('Images/icons-cursor.png')10 10, auto;
-
 }
 
+button project1:hover{
+    background-color: red;
+}
 
 #footer {
     display: block;
     color: black;
-    background-color: rgb(89, 56, 56);
-    border-radius: 25%;
-    padding: 20px;
-    margin-top: 50px;
-    background-color: rgb(29, 207, 207);
 }
 
 #footer:hover {
@@ -172,10 +150,6 @@ project1 {
 
 #Project1 {
     display: block;
-    border: 2px solid grey;
-    border-radius: 10%;
-    margin-top: 50px;
-    padding: 10px;
 }
 
 #Project1 a {
@@ -190,10 +164,6 @@ project1 {
 
 #Project2 {
     display: block;
-    border: 2px solid grey;
-    border-radius: 10%;
-    margin-top: 50px;
-    padding: 10px;
 }
 
 #Project2 a {
@@ -208,10 +178,6 @@ project1 {
 
 #Project3 {
     display: block;
-    border: 2px solid grey;
-    border-radius: 10%;
-    margin-top: 50px;
-    padding: 10px;
 }
 
 #Project3 a {
@@ -228,11 +194,7 @@ project1 {
 
 #Message {
     display: block;
-    border: 2px solid grey;
     border-radius: 10%;
-    margin-top: 50px;
-    padding: 10px;
-    background-color: rgb(29, 207, 207);
 }
 
 #Message:hover {
@@ -249,15 +211,9 @@ textarea {
     border-radius: 5px;
 }
 
-
-
 #SocialMedia {
     display: block;
-    border: 2px solid grey;
     border-radius: 10%;
-    margin-top: 50px;
-    padding: 10px;
-    background-color: rgb(29, 207, 207);
 }
 
 #SocialMedia:hover {
