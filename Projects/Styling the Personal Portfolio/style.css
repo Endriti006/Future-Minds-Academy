@@ -7,9 +7,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    padding: 0 200px 0 200px;
+    padding: 0 10% 0 10%;
+}
+
+ul{
+    padding: 0;
 }
 
 .navigation {
@@ -19,16 +23,13 @@ body {
 }
 
 .navigation li {
-    display: block;
     list-style-type: none;
     padding: 0;
-    margin-bottom: 20px;
     padding: 10px;
     float: left;
 }
 
 .navigation a {
-    display: block;
     color: black;
     border: 2px solid grey;
     padding: 10px;
@@ -37,6 +38,7 @@ body {
     border-radius: 10px;
     background-color: rgb(98, 179, 223);
     text-align: center;
+    text-decoration: none;
 }
 
 .navigation span {
@@ -54,7 +56,7 @@ body {
     margin-top: 50px;
     background-color: rgb(29, 207, 207);
     border-radius: 25px;
-    border: 2px solid grey;
+    border: 2px solid grey transparent;
 }
 
 #Portfolio {
@@ -78,7 +80,10 @@ body {
 
 #education {
     display: block;
-    margin-top: 10px;
+}
+#education ul {
+    list-style-position: inside;
+    padding-left: 0; 
 }
 
 #education:hover {
@@ -97,15 +102,21 @@ body {
     justify-items: left;
     text-align: left;
     padding: 10px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #skills {
     margin-top: 50px;
     display: block;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
 }
 
-.table {
+#skills table {
     border-collapse: collapse;
+    margin: auto;
 }
 
 #skills:hover {
@@ -199,6 +210,7 @@ button project1:hover {
 #Message {
     display: block;
     border-radius: 10%;
+    font-family: inherit;
 }
 
 #Message:hover {
@@ -213,6 +225,7 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid grey;
     border-radius: 5px;
+    font-family: inherit;
 }
 
 #SocialMedia {
