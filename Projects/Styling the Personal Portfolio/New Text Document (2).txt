@@ -1,0 +1,17 @@
+endriti006.github.io
+
+
+display block 
+margin-bootom me hek
+nven te pixelave me %
+transparetn me bo border
+margin auto mi thon tabeles
+
+me dhon style tabeles
+
+e kom ni A mbrenda footer
+
+fontfamily me trashgimi
+
+
+
