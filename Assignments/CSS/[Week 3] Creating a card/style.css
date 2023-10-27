@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 2em;
+    gap: 3em;
+    background-color: bisque;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 5px grey;
+    padding: 2em 1em 2em 1em;
+    gap: 1em;
+}
+.card-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+}
+img{
+    width: 300px;
+    align-self: center;
+}
+
+.sizes-container{
+    display: flex;
+    justify-self: flex-end;
+    flex-direction: column;
+    color: purple;
+    gap: 0.3em;
+}
+.sizes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4em;
+    flex-wrap: wrap;
+}
+.sizes-label{
+    text-transform: uppercase;
+}
+
+.size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    width: 2em;
+    height: 2em;
+    border: 1px solid purple;
+    font-size: 1em;
+    cursor:pointer;
+}
+
+.size:hover{
+    color: white;
+    background-color:purple ;
+}
+
+.card-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category{
+    text-transform: uppercase;
+    color: purple;
+    font-size: 1em;
+}
+
+.product-title{
+    text-transform: uppercase;
+    color: black;
+    font-size: 2em;
+}
+
+.price{
+    color: purple;
+    font-size: 3em;
+}
+
+.description{
+    text-align: start;
+    margin-top: 1em;
+    flex-grow: 2;
+    word-spacing: 5px;
+}
+
+.card_button{
+    display: flex;
+    gap: 5px;
+}
+
+.add-to-cart{
+    text-transform: uppercase;
+    background-color:purple;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    padding: 1em 0 1em 0;
+    text-align: center;
+    cursor: pointer;
+    flex-grow: 1;
+}
+.add-to-cart:hover{
+    box-shadow: 0px 0px 2px 1px purple;
+}
+
+
+
+
+
+
+
