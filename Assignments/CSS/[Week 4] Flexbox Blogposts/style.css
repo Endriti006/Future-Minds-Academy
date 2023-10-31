@@ -2,12 +2,15 @@
     box-sizing: border-box;
     margin: 0;
 }
+h1{
+    text-transform: uppercase;
+}
+   
 body{
     display: flex;
     min-height: 100vh;
     flex-direction: row;
-    margin: 0;
-    gap: 100px;
+    gap: 5em;
 }
 
 .container1{
@@ -17,22 +20,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex:1;
     background-color: bisque;
-    flex:2;
+    text-align: right;
+    font-size: 2.5em;
 }
-
-h1{
-    font-size: 2rem;
-}
-h3{
-    font-size: 1.4rem
-}
-
-p{
-    font-size: large;
-
-}
-    
 
 .button{
     padding: 10px;
@@ -43,45 +35,39 @@ p{
 
 .container2{
     background-color: white;
-    flex: 10;
+    flex: 5;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 5em 5em 5em 0em;
+    gap: 8em;
 }
 
-.Pinned{
+img{
     position: relative;
-    top: 100px;
-}
-.Recent{
-    position: relative;
-    top: 250px;
-    margin-bottom: 10px;
+    width: 60px;
+    left: 1100px;
+    bottom: -80px;
 }
 
 .css{
     color: white;
-    border: 1px solid black;
     padding: 3px 5px;
-    background-color: green;
+    background-color: rgb(13, 175, 13);
 }
+
 .html{
     color: white;
-    border: 1px solid black;
     padding: 3px 5px;
-    background-color: blue;
+    background-color: rgb(67, 134, 201);
 }
+
 .Javascript{
     color: white;
-    border: 1px solid black;
     padding: 3px 5px;
     background-color: red;
 }
 
-.John{
-    color: blue;
-}
-
-.Rocky{
-    color: blue;
+a{
+    text-decoration: none;
 }
