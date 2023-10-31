@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+    gap: 100px;
+}
+
+.container1{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: bisque;
+    flex:2;
+}
+
+h1{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.4rem
+}
+
+p{
+    font-size: large;
+
+}
+    
+
+.button{
+    padding: 10px;
+    border: 1px solid grey;
+    margin: 10px;
+    background-color: bisque;
+}
+
+.container2{
+    background-color: white;
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Pinned{
+    position: relative;
+    top: 100px;
+}
+.Recent{
+    position: relative;
+    top: 250px;
+    margin-bottom: 10px;
+}
+
+.css{
+    color: white;
+    border: 1px solid black;
+    padding: 3px 5px;
+    background-color: green;
+}
+.html{
+    color: white;
+    border: 1px solid black;
+    padding: 3px 5px;
+    background-color: blue;
+}
+.Javascript{
+    color: white;
+    border: 1px solid black;
+    padding: 3px 5px;
+    background-color: red;
+}
+
+.John{
+    color: blue;
+}
+
+.Rocky{
+    color: blue;
+}
