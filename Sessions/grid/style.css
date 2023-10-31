@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(245, 236, 224);
+}
+
+.main{
+    display: grid;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px ;
+    grid-gap: 1px;
+}
+
+.item1{
+    background-color: bisque;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
