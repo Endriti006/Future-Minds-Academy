@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:(4,1fr,100px) ;
+    grid-template-rows: (3,1fr);
+    height: 100vh;
+    column-gap: 75px;
+}
+
+.header{
+    background-color: red;
+
+    grid-column: 1/5;
+}
+.footer{
+    background-color: red;
+
+    grid-column: 1/5;
+}
+.green{
+    background-color: green;
+}

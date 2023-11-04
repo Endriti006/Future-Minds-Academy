@@ -4,57 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogpost</title>
     <link rel="stylesheet" href="style.css">
+    <title>Blogposts</title>
 </head>
 
 <body>
-    <nav class="container1">
-        <h1>A Sample Blog</h2>
-            <h3>Lorem ipsum, dolor</h3>
-            <button class="button">LOG IN</button>
-    </nav>
-
-    <div class="container2">
-        <section class="Pinned">
-            <img src="image/person.jpg" alt="foto e nje personi">
-            <p>Pinned Post</p>
-            <hr>
-            <h1>A pinned post</h1>
-            <p>By <a href="#">John Doe</a> under <span class="css">CSS</span>
-                <span class="html">HTML</span>
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci facilis quos dolores sequi ratione
-                quas, nisi iste incidunt odit unde modi optio omnis dolor, maiores distinctio, odio neque temporibus
-                expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, illum! Iure ipsum hic esse
-                nam corporis explicabo. Natus porro amet impedit perferendis blanditiis, facilis quam ipsum. Vel
-                possimus laborum inventore nostrum! Rerum, animi? Iste fugit dolore nostrum quasi in odio voluptatem
-                ipsum dolores aliquid velit voluptates natus fugiat soluta, non quisquam expedita accusantium sapiente
-                corporis. Hic, consequatur nulla rerum et incidunt facere omnis expedita reprehenderit architecto sed
-                tempore eos voluptas quis, praesentium officiis cumque. Aliquam quisquam architecto cum expedita vitae
-                minus, eum quasi. Culpa, distinctio cumque quae minus ducimus exercitationem? At, animi? Cupiditate non
-                voluptas excepturi iusto odio earum mollitia.</p>
+    <main>
+        <section id="left-section">
+            <div class="left-section-container">
+                <h1>A <br>SAMPLE<br> BLOG</h1>
+                <p>Lorem Ipsum <br> dolor</p>
+                <button>LOG IN</button>
+            </div>
         </section>
 
-        <section class="Recent">
-            <img src="image/person.jpg" alt="foto e nje personi">
-            <p>Recent Post</p>
-            <hr>
-            <h1>A recent post</h1>
-            <p>By <a href="#">Rocky Balboa</a> under <span class="Javascript"> Javascript</span></p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci facilis quos dolores sequi ratione
-                quas, nisi iste incidunt odit unde modi optio omnis dolor, maiores distinctio, odio neque temporibus
-                expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, illum! Iure ipsum hic esse
-                nam corporis explicabo. Natus porro amet impedit perferendis blanditiis, facilis quam ipsum. Vel
-                possimus laborum inventore nostrum! Rerum, animi? Iste fugit dolore nostrum quasi in odio voluptatem
-                ipsum dolores aliquid velit voluptates natus fugiat soluta, non quisquam expedita accusantium sapiente
-                corporis. Hic, consequatur nulla rerum et incidunt facere omnis expedita reprehenderit architecto sed
-                tempore eos voluptas quis, praesentium officiis cumque. Aliquam quisquam architecto cum expedita vitae
-                minus, eum quasi. Culpa, distinctio cumque quae minus ducimus exercitationem? At, animi? Cupiditate non
-                voluptas excepturi iusto odio earum mollitia.</p>
-        </section>
+        <section id="right-section">
+            <div class="right-section-container">
+                <h3>PINNED POST</h3>
+                <hr>
 
-    </div>
+                <div class="cards">
+                    <div class="cards-data-container">
+                        <div class="cards-data-title">
+                            <h1>A pinned post</h1>
+                            <p>By <span class="name">John Doe</span> under <span class="css-data">CSS</span> <span
+                                    class="html-data">HTML</span></p>
+                        </div>
+                        <img src="image/person.jpg">
+                    </div>
+                    <p class="cards-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quisquam
+                        accusantium numquam quod
+                        nesciunt inventore animi expedita recusandae, tempore explicabo sint ullam corrupti sapiente.
+                        Repudiandae laborum labore animi provident in! Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Soluta repudiandae, error cumque ad distinctio quam reiciendis molestiae necessitatibus
+                        enim</p>
+                </div>
+
+
+                <h3>RECENT POSTS</h3>
+                <hr>
+
+                <div class="cards">
+                    <div class="cards-data-container">
+                        <div class="cards-data-title">
+                            <h1>A recent post</h1>
+                            <p>By <span class="name">Rocky Balboa</span> under <span
+                                    class="javascript-data">JavaScript</span></p>
+                        </div>
+                        <img src="image/person.jpg">
+                    </div>
+                    <p class="cards-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, quisquam
+                        accusantium numquam quod
+                        nesciunt inventore animi expedita recusandae, tempore explicabo sint ullam corrupti sapiente.
+                        Repudiandae laborum labore animi provident in! Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, sit culpa. Voluptatibus
+                        quaerat rem.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
