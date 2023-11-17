@@ -57,3 +57,19 @@ body{
 .listItems.active{
     background-color: red;
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  per me perdor per kejtat mos me perserit    */
+}
+
+.circle{
+    width: 30px;
+}
