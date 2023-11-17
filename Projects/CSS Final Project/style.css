@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    height: 100vh;
+}
+
+.aside{
+    background-image: url(images/images/sidebar-1.jpg);
+    background-color:rgb(0, 0, 0,0.7);
+    background-blend-mode:color;
+}
+
+.listItemsInfo img{
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+.aside-h1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.aside p,h1{
+    color: white;
+    padding: 0 10px;
+}
+
+.material-symbols-outlined{
+    width: 50px;
+    height: auto;
+    color: white;
+}
+.listItems{
+    margin: 10px 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listItemsInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.listItems:hover{
+    background-color: red;
+}
+
+.listItems.active{
+    background-color: red;
+}
