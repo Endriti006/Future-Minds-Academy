@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" href="style.css">
 
@@ -23,7 +23,7 @@
 
             <div class="listItems">
                 <div class="listItemsInfo">
-                    <img src="images/images/avatar.jpg" alt="">
+                    <img src="assets/images/avatar.jpg" alt="">
                     <p>John Doe</p>
                 </div>
                 <span class="material-symbols-outlined">
@@ -143,40 +143,132 @@
             </div>
         </aside>
 
-        <main>
+        <div class="rightSideMain">
             <header>
-                <div class="flexxenter">
-                <div class="circle">
-                    <img src="" alt="">
+                <div class="header-left">
+                    <div class="circle-button">
+                        <span class="material-symbols-outlined" title="See More">more_vert</span>
+                    </div>
+                    <p>Dashboard</p>
                 </div>
-                <p>Dashboard</p>
-            </div>
-            <div class="flexcenter">
-                <form  class="flexcenter">
-                    <input type="search" id="search" placeholder="search">
-                    <label for="serach" class="circle">
-                        <img src="" alt="">
-                    </label>
-                </form>
+                <div class="header-right">
+                    <form>
+                        <input type="text" placeholder="Search" class="seach-input">
+                    </form>
 
-                <figure>
-                    <img src="" alt="">
-                </figure>
-            </div>
+                    <div class="circle-button">
+                        <span class="material-symbols-outlined" title="Search">search</span>
+                    </div>
 
+                    <nav class="header-navigation">
+                        <span class="material-symbols-outlined spaces" title="Dashboard">dashboard</span>
 
-
+                        <div class="notification-container" id="notification">
+                            <span class="material-symbols-outlined" title="Notification">notifications</span>
+                            <p class="notification" title="Notification">5</p>
+                            <ul class="notification-box">
+                                <li>
+                                    <p>John Doe sent a message</p>
+                                </li>
+                                <li>
+                                    <p>Someone viewed your profile</p>
+                                </li>
+                                <li>
+                                    <p>John Doe sent a message</p>
+                                </li>
+                                <li>
+                                    <p>Someone viewed your profile</p>
+                                </li>
+                                <li>
+                                    <p>Another notification</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="material-symbols-outlined spaces-end" title="Profile">person</span>
+                    </nav>
+                </div>
+                <span class="material-symbols-outlined" id="view-button" title="Profile">view_headline</span>
             </header>
+
+
+
+            <main>
+                <section class="mainCard">
+  <!--  <span class="material-symbols-outlined green">
+                        language
+                    </span> -->
+                    
+                    <p class="title"> Global Sales by top Locations</p>
+
+                    <div class="mainCardInfo">
+                        <table>
+                            <tr>
+                                <td><img class="flag" src="assets/images/us.png" alt="flag of USA"></td>
+                                <td>USA</td>
+                                <td>2.920</td>
+                                <td>53.23%</td>
+                            </tr>
+
+                            <tr>
+                                <td><img class="flag" src="assets/images/germany.png" alt="flag of Germany" ></td>
+                                <td>Germany</td>
+                                <td>1.300</td>
+                                <td>4.34%</td>
+                            </tr>
+
+                            <tr>
+                                <td><img class="flag" src="assets/images/australia.png" alt="flag of Australia"></td>
+                                <td>Australia</td>
+                                <td>760</td>
+                                <td>20.43%</td>
+                            </tr>
+
+                            <tr>
+                                <td><img class="flag" src="assets/images/united-kingdom.png" alt="flag of United Kingdom" ></td>
+                                <td>United Kingdom</td>
+                                <td>690</td>
+                                <td>10.35%</td>
+                            </tr>
+
+                            <tr>
+                                <td><img class="flag" src="assets/images/romania.png" alt="flag of Romania" ></td>
+                                <td>Romania</td>
+                                <td>600</td>
+                                <td>7.87%</td>
+                            </tr>
+
+                            <tr>
+                                <td><img class="flag" src="assets/images/brazil.png" alt="flag of Brazil"></td>
+                                <td>Brazil</td>
+                                <td>550</td>
+                                <td>5.94%</td>
+                            </tr>
+
+                        </table>
+
+                        <div class="mainCardInfo-iframe">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387194.0507365849!2d-74.30862916789279!3d40.697021271126985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1699117117957!5m2!1sen!2s"
+                                width="600px" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+
+                    </div>
+                </section>
+            </main>
+
+
 
             <footer>
 
             </footer>
 
-        </main>
+            </main>
 
 
 
-    </div>
+        </div>
 </body>
 
 </html>
