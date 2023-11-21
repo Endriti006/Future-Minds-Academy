@@ -142,6 +142,7 @@ header span {
     transition: 0.3s ease-in;
     margin: 0;
     width: 14rem;
+    background-color: transparent;
 }
 
 .seach-input:focus {
@@ -387,7 +388,7 @@ td {
 
 figure .material-symbols-outlined {
     position: absolute;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 3px;
     top: -20px;
     left: 20px;
