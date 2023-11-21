@@ -43,7 +43,7 @@ h1 {
     padding: 0 10px;
 }
 
-.material-symbols-outlined {
+.aside .material-symbols-outlined  {
     width: 50px;
     height: auto;
     color: white;
@@ -72,7 +72,6 @@ h1 {
 }
 
 /*    Main           */
-
 
 .rightSideMain {
     overflow-y: scroll;
@@ -128,6 +127,7 @@ header span {
     display: flex;
     justify-content: end;
     align-items: center;
+    gap: 5px;
 }
 
 .seach-input {
@@ -227,19 +227,29 @@ header span:hover {
 /* MAIN CARD */
 
 .mainCard{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(130, 130, 130);
     border-radius: 5px;
     position: relative;
+    margin:100px 0 100px 0;
 }
 
 .mainCard .material-symbols-outlined{
     position: absolute;
-    font-size: 10rem;
+    font-size: 1rem;
     border-radius: 3px;
     top: -20px;
     left: 20px;
     padding: 30px;
     z-index: 10;
+}
+
+.title{
+    margin: 25px 0 0 120px;
+}
+
+.mainCardTitle{
+    display: flex;
+    justify-content: space-between;
 }
 
 .mainCard{
@@ -313,3 +323,62 @@ tr{
 td{
     padding: 10px 0px 5px 0px;
 }
+
+.saleCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+}
+
+.saleCardBox{
+    border-radius: 5px;
+    position: relative;
+    padding: 0 20px 0 20px;
+    background-color: #888888;
+}
+
+.orange{
+    background-color: orange;
+}
+.blue{
+    background-color: blue;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.saleCardBoxTitle{
+    text-align: end;
+}
+
+.saleCardBoxBottom{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+}
+
+.saleCardBoxNumber{
+    margin: 0;
+    font-size: 2rem;
+    text-align: end;
+    font-weight: 400;
+}
+
+.saleCardBoxBottom{
+    font-size: 1rem;
+}
+
+figure .material-symbols-outlined{
+    position: absolute;
+    font-size: 2rem;
+    border-radius: 3px;
+    top: -20px;
+    left: 20px;
+    padding: 30px;
+    z-index: 10;
+}
+
+
