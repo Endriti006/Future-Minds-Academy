@@ -80,6 +80,7 @@ h1 {
     grid-template-rows: auto auto;
     padding: 0px 3% 0px 3%;
     grid-template-columns: 1fr;
+    background-color: rgb(236, 236, 236);
 }
 
 header {
@@ -229,7 +230,7 @@ header span:hover {
 /* MAIN CARD */
 
 .mainCard {
-    background-color: rgb(130, 130, 130);
+    background-color: white;
     border-radius: 5px;
     position: relative;
     margin: 100px 0 100px 0;
@@ -339,7 +340,7 @@ td {
     border-radius: 5px;
     position: relative;
     padding: 0 20px 0 20px;
-    background-color: #888888;
+    background-color: white;
 }
 
 .orange {
@@ -416,6 +417,7 @@ figure .material-symbols-outlined {
     align-items: center;
     text-align: center;
     border-radius: 5px;
+    background-color: white;
 }
 
 
