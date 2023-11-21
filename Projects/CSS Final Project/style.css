@@ -86,7 +86,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items:start;
-    margin: 50px 0 50px 0;
+    margin: 50px 0 100px 0;
 }
 header .material-symbols-outlined{
     color: black;
@@ -172,7 +172,7 @@ header span:hover {
 .notification {
     position: absolute;
     top: -10px;
-    right: 16px;
+    right: -10px;
     margin: 0;
     width: 20px;
     height: 20px;
