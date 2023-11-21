@@ -43,7 +43,7 @@ h1 {
     padding: 0 10px;
 }
 
-.aside .material-symbols-outlined  {
+.aside .material-symbols-outlined {
     width: 50px;
     height: auto;
     color: white;
@@ -85,10 +85,11 @@ h1 {
 header {
     display: flex;
     justify-content: space-between;
-    align-items:start;
+    align-items: start;
     margin: 50px 0 100px 0;
 }
-header .material-symbols-outlined{
+
+header .material-symbols-outlined {
     color: black;
 }
 
@@ -227,14 +228,14 @@ header span:hover {
 
 /* MAIN CARD */
 
-.mainCard{
+.mainCard {
     background-color: rgb(130, 130, 130);
     border-radius: 5px;
     position: relative;
-    margin:100px 0 100px 0;
+    margin: 100px 0 100px 0;
 }
 
-.mainCard .material-symbols-outlined{
+.mainCard .material-symbols-outlined {
     position: absolute;
     font-size: 1rem;
     border-radius: 3px;
@@ -244,24 +245,24 @@ header span:hover {
     z-index: 10;
 }
 
-.title{
+.title {
     margin: 25px 0 0 120px;
     font-size: 1.3em;
 }
 
-.mainCardTitle{
+.mainCardTitle {
     display: flex;
     justify-content: space-between;
 }
 
-.mainCard{
+.mainCard {
     padding-right: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.mainCardInfo{
+.mainCardInfo {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
@@ -269,118 +270,121 @@ header span:hover {
     gap: 30px;
 }
 
-.mainCardInfo-iframe{
+.mainCardInfo-iframe {
     flex: 2;
 }
 
-iframe{
+iframe {
     width: 100%;
     height: 100%;
 }
 
-title{
+title {
     margin: 25px 0 0 120px;
 }
 
-.green{
+.green {
     background-color: green;
 }
 
-.flag{
+.flag {
     width: 1.3rem;
     height: 1.3rem;
 }
 
-table{
+table {
     flex: 1;
     width: 100%;
     border-collapse: collapse;
     height: 350px;
 }
 
-tr{
+tr {
     border-bottom: 1px solid grey;
     width: 65%;
 }
 
-td:nth-child(1){
+td:nth-child(1) {
     white-space: nowrap;
     width: 30px;
 }
 
 
-td:nth-child(3), td:nth-child(4){
+td:nth-child(3),
+td:nth-child(4) {
     width: 5rem;
     text-align: right;
 }
 
-tr:last-child{
-    border:none;
+tr:last-child {
+    border: none;
 }
 
-tr{
+tr {
     border-bottom: 1px solid rgb(196, 196, 196);
 }
 
-td{
+td {
     padding: 10px 0px 5px 0px;
 }
 
-.saleCard{
+.saleCard {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 50px;
 }
 
-.saleCardBox{
+.saleCardBox {
     border-radius: 5px;
     position: relative;
     padding: 0 20px 0 20px;
     background-color: #888888;
 }
 
-.orange{
+.orange {
     background-color: orange;
 }
-.blue{
+
+.blue {
     background-color: blue;
 }
 
-.pink{
+.pink {
     background-color: pink;
 }
 
-.red{
+.red {
     background-color: red;
 }
-.grey{
+
+.grey {
     background-color: grey;
 }
 
-.saleCardBoxTitle{
+.saleCardBoxTitle {
     text-align: end;
 }
 
-.saleCardBoxBottom{
+.saleCardBoxBottom {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: start;
 }
 
-.saleCardBoxNumber{
+.saleCardBoxNumber {
     margin: 0;
     font-size: 2rem;
     text-align: end;
     font-weight: 400;
 }
 
-.saleCardBoxBottom{
+.saleCardBoxBottom {
     font-size: 1rem;
 }
 
-figure .material-symbols-outlined{
+figure .material-symbols-outlined {
     position: absolute;
     font-size: 2rem;
     border-radius: 3px;
@@ -390,25 +394,44 @@ figure .material-symbols-outlined{
     z-index: 10;
 }
 
-.manageListing-container{
+.manage-list-container{
+    margin: 100px 0 100px 0; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    margin-top: 100px;
+    margin-top: 30px;   
 }
 
 
-.apartament{
+.manage-list-title {
+    margin-bottom: 65px;
+}
+
+.manage-list-item {
     position: relative;
-    width: 300px;
-    height: 250px;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+.manage-list-item-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
     z-index: 2;
     transition: 0.2s ease-in-out;
     top: 0;
 }
 
-.manageListAnimation{
+
+.manage-list-item-animation {
     position: relative;
     top: -30px;
     display: flex;
@@ -417,43 +440,64 @@ figure .material-symbols-outlined{
     align-items: center;
 }
 
-.manageListAnimation .apartament{
+.manage-list-item-animation:hover .manage-list-item-img {
     top: -1.5rem;
     cursor: pointer;
 }
 
-.manageListItemEdits{
+
+.manage-list-item-edits {
     position: absolute;
     bottom: 0;
+    gap: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
 }
-.manageListItemEdits .material-symbols-outlined{
+
+.manage-list-item-edits span {
     cursor: pointer;
     font-size: 1.5rem;
 }
 
-.manageListItem{
+.gray-span {
+    color: grey;
+}
+
+.green-span {
+    color: green;
+}
+
+.red-span {
+    color: red;
+}
+
+.manage-list-item-title {
+    margin: 0;
     position: relative;
-    padding: 0px 15px 0 15px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    text-align: center;
-    background-color: grey;
-    margin-bottom: 100px;
+    top: -15px;
+    font-size: 1.3rem;
 }
 
-.manageListItemBottom{
+.manage-list-item-paragraph {
+    margin: 0px 0px 20px 0px;
+}
+
+.manage-list-item hr {
+    width: 100%;
+    margin: 0;
+}
+
+.manage-list-item-bottom {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.manageListItemBottomRight{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
+.manage-list-item-bottom-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
