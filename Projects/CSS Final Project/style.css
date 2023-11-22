@@ -829,6 +829,7 @@ hr {
     #view-button {
         display: block;
         font-size: 2rem;
+        margin-top: 10px;
     }
 
 }
