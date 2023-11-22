@@ -809,7 +809,7 @@ hr {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:640px) {
     .saleCard {
         display: -ms-grid;
         display: grid;
@@ -823,7 +823,7 @@ hr {
     }
 
     .manage-list-item-edits {
-        font: size 2rem;
+        font-size:  2rem;
     }
 
 }
