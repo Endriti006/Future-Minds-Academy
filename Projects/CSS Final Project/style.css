@@ -826,4 +826,9 @@ hr {
         font-size:  2rem;
     }
 
+    #view-button {
+        display: block;
+        font-size: 2rem;
+    }
+
 }
