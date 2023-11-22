@@ -152,14 +152,16 @@
                     <p>Dashboard</p>
                 </div>
                 <div class="header-right">
-                    <form>
-                        <input type="text" placeholder="Search" class="seach-input">
-                    </form>
+                    <form class="searchLabel">
+                        <label for="search" class="search-wrapper">
+                          <input type="text" placeholder="Search" id="search" class="search-input">
+                          <div class="circle-button">
+                            <span class="material-symbols-outlined">search</span>
+                          </div>
+                        </label>
+                      </form>
 
-                    <div class="circle-button">
-                        <span class="material-symbols-outlined" title="Search">search</span>
-                    </div>
-
+                    
                     <nav class="header-navigation">
                         <span class="material-symbols-outlined spaces" title="Dashboard">dashboard</span>
 
@@ -249,7 +251,7 @@
                         <div class="mainCardInfo-iframe">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387194.0507365849!2d-74.30862916789279!3d40.697021271126985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1699117117957!5m2!1sen!2s"
-                                 style="border:0;" allowfullscreen="" loading="lazy"
+                                style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
@@ -313,113 +315,114 @@
                 </section>
 
                 <section class="manage-list-container">
-                    <div class="manage-list">
-                        <div class="manage-list-item">
-                            <div class="manage-list-item-animation">
-                                <img src="assets/images/card-1.jpeg" class="manage-list-item-img">
+                    <p class="manageTitle">Manage Listings</p>
+                    <div class="manage-list-item">
+                        <div class="manage-list-item-animation">
+                            <img src="assets/images/card-1.jpeg" class="manage-list-item-img">
 
-                                <div class="manage-list-item-edits">
-                                    <span class="material-symbols-outlined gray-span" title="View">preview</span>
-                                    <span class="material-symbols-outlined green-span" title="Edit">done</span>
-                                    <span class="material-symbols-outlined red-span" title="Delete">close</span>
-                                </div>
-                            </div>
-
-                            <p class="manage-list-item-title">Cozy 5 Stars Apartment</p>
-                            <p class="manage-list-item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Quos,
-                                facilis consectetur harum et rem quidem ut
-                                dolorum impedit expedita fugiat velit, est quas perferendis quae repudiandae atque
-                                architecto
-                                eligendi sint?
-                            </p>
-                            <hr>
-
-                            <div class="manage-list-item-bottom">
-                                <p>$899/night</p>
-                                <div class="manage-list-item-bottom-right">
-                                    <span class="material-symbols-outlined gray-span" title="Delete">location_on</span>
-                                    <p>Barcelona, Spain</p>
-                                </div>
+                            <div class="manage-list-item-edits">
+                                <span class="material-symbols-outlined grey" title="View">preview</span>
+                                <span class="material-symbols-outlined grenspan" title="Edit">done</span>
+                                <span class="material-symbols-outlined red" title="Delete">close</span>
                             </div>
                         </div>
 
+                        <p class="manage-list-item-title">Cozy 5 Stars Apartment</p>
+                        <p class="manage-list-item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Quos,
+                            facilis consectetur harum et rem quidem ut
+                            dolorum impedit expedita fugiat velit, est quas perferendis quae repudiandae atque
+                            architecto
+                            eligendi sint?
+                        </p>
+                        <hr>
+
+                        <div class="manage-list-item-bottom">
+                            <p>$899/night</p>
+                            <div class="manage-list-item-bottom-right">
+                                <span class="material-symbols-outlined gray" title="Delete">location_on</span>
+                                <p>Barcelona, Spain</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="manage-list">
-                        <div class="manage-list-item">
-                            <div class="manage-list-item-animation">
-                                <img src="assets/images/card-2.jpeg" class="manage-list-item-img">
+                    <div class="manage-list-item">
+                        <div class="manage-list-item-animation">
+                            <img src="assets/images/card-2.jpeg" class="manage-list-item-img">
 
-                                <div class="manage-list-item-edits">
-                                    <span class="material-symbols-outlined gray-span" title="View">preview</span>
-                                    <span class="material-symbols-outlined green-span" title="Edit">done</span>
-                                    <span class="material-symbols-outlined red-span" title="Delete">close</span>
-                                </div>
-                            </div>
-
-                            <p class="manage-list-item-title">Cozy 5 Stars Apartment</p>
-                            <p class="manage-list-item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Quos,
-                                facilis consectetur harum et rem quidem ut
-                                dolorum impedit expedita fugiat velit, est quas perferendis quae repudiandae atque
-                                architecto
-                                eligendi sint?
-                            </p>
-                            <hr>
-
-                            <div class="manage-list-item-bottom">
-                                <p>$899/night</p>
-                                <div class="manage-list-item-bottom-right">
-                                    <span class="material-symbols-outlined gray-span" title="Delete">location_on</span>
-                                    <p>Barcelona, Spain</p>
-                                </div>
+                            <div class="manage-list-item-edits">
+                                <span class="material-symbols-outlined grey" title="View">preview</span>
+                                <span class="material-symbols-outlined grenspan" title="Edit">done</span>
+                                <span class="material-symbols-outlined red" title="Delete">close</span>
                             </div>
                         </div>
 
+                        <p class="manage-list-item-title">Cozy 5 Stars Apartment</p>
+                        <p class="manage-list-item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Quos,
+                            facilis consectetur harum et rem quidem ut
+                            dolorum impedit expedita fugiat velit, est quas perferendis quae repudiandae atque
+                            architecto
+                            eligendi sint?
+                        </p>
+                        <hr>
+
+                        <div class="manage-list-item-bottom">
+                            <p>$1.119/night</p>
+                            <div class="manage-list-item-bottom-right">
+                                <span class="material-symbols-outlined grey" title="Delete">location_on</span>
+                                <p>London, UK</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="manage-list">
-                        <div class="manage-list-item">
-                            <div class="manage-list-item-animation">
-                                <img src="assets/images/card-3.jpeg" class="manage-list-item-img">
+                    <div class="manage-list-item">
+                        <div class="manage-list-item-animation">
+                            <img src="assets/images/card-3.jpeg" class="manage-list-item-img">
 
-                                <div class="manage-list-item-edits">
-                                    <span class="material-symbols-outlined gray-span" title="View">preview</span>
-                                    <span class="material-symbols-outlined green-span" title="Edit">done</span>
-                                    <span class="material-symbols-outlined red-span" title="Delete">close</span>
-                                </div>
-                            </div>
-
-                            <p class="manage-list-item-title">Cozy 5 Stars Apartment</p>
-                            <p class="manage-list-item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                                Quos,
-                                facilis consectetur harum et rem quidem ut
-                                dolorum impedit expedita fugiat velit, est quas perferendis quae repudiandae atque
-                                architecto
-                                eligendi sint?
-                            </p>
-                            <hr>
-
-                            <div class="manage-list-item-bottom">
-                                <p>$899/night</p>
-                                <div class="manage-list-item-bottom-right">
-                                    <span class="material-symbols-outlined gray-span" title="Delete">location_on</span>
-                                    <p>Barcelona, Spain</p>
-                                </div>
+                            <div class="manage-list-item-edits">
+                                <span class="material-symbols-outlined grey" title="View">preview</span>
+                                <span class="material-symbols-outlined grenspan" title="Edit">done</span>
+                                <span class="material-symbols-outlined red" title="Delete">close</span>
                             </div>
                         </div>
 
-                    </div>
+                        <p class="manage-list-item-title">Cozy 5 Stars Apartment</p>
+                        <p class="manage-list-item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Quos,
+                            facilis consectetur harum et rem quidem ut
+                            dolorum impedit expedita fugiat velit, est quas perferendis quae repudiandae atque
+                            architecto
+                            eligendi sint?
+                        </p>
+                        <hr>
 
+                        <div class="manage-list-item-bottom">
+                            <p>$459/night</p>
+                            <div class="manage-list-item-bottom-right">
+                                <span class="material-symbols-outlined gray" title="Delete">location_on</span>
+                                <p>Milan, Italy</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-
-
+                <hr>
             </main>
 
+            <footer>
+                <div class="footer-container">
+                  <div class="leftSideFooter">
+                    <h4>Home</h4>
+                    <h4>Company</h4>
+                    <h4>Portfolio</h4>  
+                    <h4>Blog</h4>
+                  </div>
+                  <p> &copy; John Doe, 2023</p>
+                </div>
+              </footer>
         </div>
 
 
