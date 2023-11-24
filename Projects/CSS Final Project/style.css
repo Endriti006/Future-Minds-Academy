@@ -14,8 +14,6 @@
     --right-side-contentBcolor:white;
     --right-side-paragraph-color:black;
     --right-side-headline-color:gray;
- 
-    
 }
 
 html,body {
@@ -342,8 +340,7 @@ header span:hover {
 .notification-box p:hover {
     border-radius: 3px;
     background-color: var(--active-color);
-    color: var(--leftmenu-word-color);
-    
+    color: var(--leftmenu-word-color); 
 }
 
 .header-navigation {
@@ -728,7 +725,7 @@ hr {
 
 /*       Tablet Media               */
 
-@media(max-width:1000px) {
+@media(max-width:1200px) {
     .aside {
         display: none;
     }
@@ -778,27 +775,8 @@ hr {
 
     .manage-list-container {
         -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr 1fr;
-        -ms-grid-rows: 1fr 75px 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 75px;
-    }
-
-    .manage-list-container > *:nth-child(1){
-        -ms-grid-row:1;
-        -ms-grid-column:1;
-    }
-
-
-    .manage-list-container > *:nth-child(2){
-        -ms-grid-row:3;
-        -ms-grid-column:1;
-    }
-
-
-    .manage-list-container > *:nth-child(3){
-        -ms-grid-row:5;
-        -ms-grid-column:1;
     }
 
     .manage-list-container-item p {
@@ -814,8 +792,7 @@ hr {
         margin-top: 30px;
     }
 
-    footer h4,
-    p {
+    footer h4, p {
         font-size: 1.3rem;
     }
 }
@@ -850,5 +827,4 @@ hr {
     .manage-list-item-edits {
         font-size: 1.3rem;
     }
-
 }
