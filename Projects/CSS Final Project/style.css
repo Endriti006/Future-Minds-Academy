@@ -1,22 +1,23 @@
-:root{
+:root {
     /*=============Overall================*/
-    --active-color:orangered;
+    --active-color: orangered;
 
     /*   Aside        */
-    --leftmenu-background-image:url(assets/images/sidebar-1.jpg);
-    --leftmenu-img-size-user:40px;
-    --leftmenu-icons-size:50px;
-    --leftmenu-word-color:white;
+    --leftmenu-background-image: url(assets/images/sidebar-1.jpg);
+    --leftmenu-img-size-user: 40px;
+    --leftmenu-icons-size: 50px;
+    --leftmenu-word-color: white;
 
     /*        Main*/
-    --right-side-bColor:rgb(238,238,238);
-    --right-side-iconSpan-color:white;
-    --right-side-contentBcolor:white;
-    --right-side-paragraph-color:black;
-    --right-side-headline-color:gray;
+    --right-side-bColor: rgb(238, 238, 238);
+    --right-side-iconSpan-color: white;
+    --right-side-contentBcolor: white;
+    --right-side-paragraph-color: black;
+    --right-side-headline-color: gray;
 }
 
-html,body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
@@ -334,13 +335,13 @@ header span:hover {
 .notification-box p {
     margin: 0;
     padding: 10px 10px 10px 20px;
-    color:  var(--right-side-paragraph-color);
+    color: var(--right-side-paragraph-color);
 }
 
 .notification-box p:hover {
     border-radius: 3px;
     background-color: var(--active-color);
-    color: var(--leftmenu-word-color); 
+    color: var(--leftmenu-word-color);
 }
 
 .header-navigation {
@@ -360,7 +361,7 @@ header span:hover {
 /* MAIN CARD */
 
 .mainCard {
-    background-color:var(--right-side-contentBcolor);
+    background-color: var(--right-side-contentBcolor);
     border-radius: 5px;
     position: relative;
     margin: 0px 0px 50px 0;
@@ -587,7 +588,7 @@ figure .material-symbols-outlined {
     -webkit-box-align: center;
     text-align: center;
     border-radius: 5px;
-    background-color:var(--right-side-contentBcolor);
+    background-color: var(--right-side-contentBcolor);
 }
 
 .manage-list-item-img {
@@ -783,8 +784,8 @@ hr {
         font-size: 1.3rem;
     }
 
-    .manage-list-item:hover .manage-list-item-img{
-        top:-2rem
+    .manage-list-item:hover .manage-list-item-img {
+        top: -2rem
     }
 
     footer {
@@ -792,13 +793,14 @@ hr {
         margin-top: 30px;
     }
 
-    footer h4, p {
+    footer h4,
+    p {
         font-size: 1.3rem;
     }
 }
 
-@media (max-width:800px){
-    .manage-list-container{
+@media (max-width:800px) {
+    .manage-list-container {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         -ms-grid-rows: 1fr 100px 1fr 100px 1fr;
@@ -808,10 +810,11 @@ hr {
 
 @media (max-width:600px) {
 
-    .rightSideMain{
+    .rightSideMain {
         width: 100%;
         max-width: 100%;
     }
+
     .saleCard {
         display: -ms-grid;
         display: grid;
