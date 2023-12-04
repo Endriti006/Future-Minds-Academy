@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('keypress', (e) => {
+
+            const letter = e.key.toLowerCase();
+
+            if (letter.length === 1) {
+
+                if (letter === 'a' || letter === 'e' || letter === 'i'
+                    || letter === 'o' || letter === 'u') {
+                    console.log('You entered the vowel: ' + e.key);
+
+                } else if (letter >= 'a' && letter <= 'z') {
+                    console.log('You entered the consonant: ' + e.key);
+
+                } else if (letter >= '0' && letter <= '9') {
+                    console.log('You entered the number: ' + e.key);
+
+                } else {
+                    console.log('You entered the symbol: ' + e.key);
+                }
+
+            }
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
