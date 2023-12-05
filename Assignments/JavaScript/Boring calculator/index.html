@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a= parseInt(prompt(`Enter the first number`));
+        let b= parseInt(prompt(`Enter the second number`));
+        let operacioni=prompt('Shkruj operacionit')
+
+        let finalresult;
+
+        if(operacioni == '+'){
+            finalresult = a+b;
+        }
+
+        else if(operacioni == '-'){
+            finalresult=a-b;
+        }
+
+        else if(operacioni == '*'){
+            finalresult=a*b;
+        }
+
+        else if(operacioni == `/`){
+            if(b=0){
+                throw new error(`Cant divide by 0`)
+            }
+            finalresult=a/b;
+        }
+        else{
+            throw new error(`Unknown operation`);
+        }
+
+        console.log(finalresult);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
