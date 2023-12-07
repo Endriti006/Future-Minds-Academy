@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="" id="in"></label>
+    <input type="name" placeholder="" id="en">
+
+    <script>
+        let gjuha = prompt('Zgjidh gjuhen');
+        let placeholder;
+        let label;
+
+        if (gjuha == 'sq') {
+            placeholder = 'Filan Fisteku'
+            label = 'Emri dhe mbemri'
+        }
+        else if (gjuha == 'en') {
+            placeholder = 'John Doe'
+            label = 'Name and Surname'
+        }
+        else if (gjuha == 'de') {
+            placeholder = "Max"
+            label = "vorname and surname"
+        }
+
+        else {
+            throw new Error('Keni zgjedhur gjuhe tjeter');
+        }
+
+        let la = document.getElementById('in');
+        la.innerHTML = label;
+
+        let pl = document.getElementById('en');
+        pl.placeholder = placeholder;
+
+    </script>
+</body>
+
+</html>
