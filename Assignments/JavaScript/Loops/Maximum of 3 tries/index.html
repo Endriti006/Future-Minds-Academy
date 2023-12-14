@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3tries</title>
+    <script>
+        let userPassword;
+        let count = 3;
+
+        do {
+            userPassword = prompt(`Please enter the password. ${count > 1 ? `You have ${count} tries left.` : (count === 1 ? `You have only ${count} try left.` : '')}`);
+            count--;
+        } while (userPassword !== '12341234' && count > 0);
+
+        alert(count > 0 ? 'Welcome' : 'You cannot try again.');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
