@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function extreactTime(timeString){
-            let hoursPast =parseInt(timeString.substring(0,2), 10);
+        let text = '05:36 PM'
 
-            let minutePast = parseInt(timeString.substring(3,5),10);
+        let hoursPast = parseInt(text.substring(0, 2), 10);
 
-            let secondPast = parseInt(timeString.substring(6,8),10);
-        }
+        let minutePast = parseInt(text.substring(3, 5), 10);
+
+        let period = text.substring(6, 8);
+
+        console.log(`Time is ${hoursPast}:${minutePast} ${period}`);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
