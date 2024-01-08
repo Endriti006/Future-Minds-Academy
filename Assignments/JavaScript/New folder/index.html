@@ -7,6 +7,18 @@
     <script>
         let circle= {
             radius:20,
+            center: {
+                x:5,
+                y:5
+            },
+
+            getcenter: function(){
+                return this.center;
+            },
+            
+            setcenter: function(center){
+                this.center=center;
+            },
 
             getradius: function(){
                 return this.radius;
@@ -19,8 +31,15 @@
             },
             getPerimeter:function(){
                 return this.radius *3.14;
+            },
+            grow: function(number){
+                this.radius +=number;
+            },
+
+            shrink: function(number){
+                this.radius -=number;
             }
-            
+        
         }
         
     </script>
