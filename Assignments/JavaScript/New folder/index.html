@@ -38,9 +38,16 @@
 
             shrink: function(number){
                 this.radius -=number;
+            },
+            printDetails :function(){
+                console.log("Circle Detalis:");
+                console.log("Radius:", this.getradius());
+                console.log("Center Position:", this.getcenter());
             }
+
         
         }
+        circle.printDetails();
         
     </script>
 </head>
