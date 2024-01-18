@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StopWatch</title>
     <style>
+        body {
+            font-family: consolas, monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #timeContainer {
+            text-align: center;
+            background-color: #222222;
+            border: 3px solid;
+            border-radius: 25px;
+            padding: 20px;
+        }
+
+        #timeDisplay {
+            font-size: 40px;
+            color: #40c437;
+        }
+
         .timerBtn {
             width: 80px;
             height: 30px;
@@ -14,20 +35,17 @@
             background-color: #333333;
             color: white;
             cursor: pointer;
-            font-size: consolas, monospace;
+            margin: 5px;
         }
 
-        #timeDisplay {
-            font-size: 75px;
-            color: #40c437;
-            font-size: consolas, monospace;
+        #lapContainer {
+            margin-top: 20px;
+            text-align: left;
         }
 
-        #timeContainer {
-            text-align: center;
-            border: 3px solid;
-            border-radius: 25px;
-            background-color: #222222;
+        .lap {
+            margin-bottom: 5px;
+            color: white;
         }
     </style>
 </head>
@@ -36,75 +54,76 @@
     <div id="timeContainer">
         <div id="timeDisplay">00:00:00</div>
         <button id="startBtn" class="timerBtn">Start</button>
+        <button id="lapBtn" class="timerBtn">Lap</button>
         <button id="pauseBtn" class="timerBtn">Pause</button>
         <button id="resetBtn" class="timerBtn">Reset</button>
+        <div id="lapContainer"></div>
     </div>
 
     <script>
         const timeDisplay = document.querySelector("#timeDisplay");
         const startBtn = document.querySelector("#startBtn");
+        const lapBtn = document.querySelector("#lapBtn");
         const pauseBtn = document.querySelector("#pauseBtn");
         const resetBtn = document.querySelector("#resetBtn");
+        const lapContainer = document.querySelector("#lapContainer");
 
         let startTime = 0;
         let elapsedTime = 0;
-        let currentTime = 0;
-        let pause = true;
         let intervalId;
-        let hrs = 0;
-        let min = 0;
-        let secs = 0;
+        let lapCount = 1;
 
         startBtn.addEventListener("click", () => {
-            if (pause) {
-                pause = false;
+            if (!intervalId) {
                 startTime = Date.now() - elapsedTime;
                 intervalId = setInterval(updateTime, 75);
             }
         });
+
+        lapBtn.addEventListener("click", () => {
+            if (intervalId) {
+                const lapTime = formatTime(elapsedTime);
+                const lapItem = document.createElement("div");
+                lapItem.classList.add("lap");
+                lapItem.textContent = `Lap ${lapCount}: ${lapTime}`;
+                lapContainer.appendChild(lapItem);
+                lapCount++;
+            }
+        });
+
         pauseBtn.addEventListener("click", () => {
-            if (!pause) {
-                pause = true;
-                elapsedTime = Date.now() - startTime;
+            if (intervalId) {
                 clearInterval(intervalId);
+                intervalId = null;
             }
         });
 
         resetBtn.addEventListener("click", () => {
-            pause = true;
             clearInterval(intervalId);
+            intervalId = null;
             startTime = 0;
             elapsedTime = 0;
-            currentTime = 0;
-            hrs = 0;
-            min = 0;
-            secs = 0;
+            lapCount = 1;
             timeDisplay.textContent = "00:00:00";
+            lapContainer.innerHTML = "";
         });
-
-
-        function pad(unit) {
-            return (("0") + unit).length > 2 ? unit : "0" + unit;
-        }
 
         function updateTime() {
             elapsedTime = Date.now() - startTime;
-            secs = Math.floor((elapsedTime / 1000) % 60);
-            mins = Math.floor((elapsedTime / (1000 * 60)) % 60);
-            hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60);
-
-            secs = pad(secs);
-            mins = pad(mins);
-            hrs = pad(hrs);
-
-            timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
-            function pad(unit) {
-                return (("0") + unit).length > 2 ? unit : "0" + unit;
-            }
-
+            const formattedTime = formatTime(elapsedTime);
+            timeDisplay.textContent = formattedTime;
         }
 
+        function formatTime(time) {
+            const mins = pad(Math.floor((time / (1000 * 60)) % 60));
+            const secs = pad(Math.floor((time / 1000) % 60));
+            const centiSecs = pad(Math.floor((time / 10) % 100));
+            return `${mins}:${secs}:${centiSecs}`;
+        }
 
+        function pad(unit) {
+            return unit.toString().padStart(2, "0");
+        }
     </script>
 </body>
 
