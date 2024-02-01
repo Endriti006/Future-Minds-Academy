@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .requirements-container {
+            text-align: left;
+            margin-bottom: 16px;
+        }
+
+        .requirements-item {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .valid-requirement {
+            color: green;
+        }
+
+        .invalid-requirement {
+            color: red;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .submit-btn:hover:enabled {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login Form</h2>
+
+        <form id="login-form" action="#" method="post" class="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="requirements-container">
+                <div class="requirements-item" id="lowercase">At least one lowercase letter</div>
+                <div class="requirements-item" id="uppercase">At least one uppercase letter</div>
+                <div class="requirements-item" id="number">At least one number</div>
+                <div class="requirements-item" id="special-char">At least one of (.,'!#)</div>
+            </div>
+
+            <button type="submit" class="submit-btn" disabled>Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const lowercaseRequirement = document.getElementById('lowercase');
+        const uppercaseRequirement = document.getElementById('uppercase');
+        const numberRequirement = document.getElementById('number');
+        const specialCharRequirement = document.getElementById('special-char');
+        const submitBtn = document.querySelector('.submit-btn');
+
+        function validatePasswordRequirements() {
+            const password = passwordInput.value;
+
+            const lowercaseRegex = /[a-z]/;
+            const uppercaseRegex = /[A-Z]/;
+            const numberRegex = /\d/;
+            const specialCharRegex = /[.,'!#]/;
+
+            lowercaseRequirement.classList.toggle('valid-requirement', lowercaseRegex.test(password));
+            uppercaseRequirement.classList.toggle('valid-requirement', uppercaseRegex.test(password));
+            numberRequirement.classList.toggle('valid-requirement', numberRegex.test(password));
+            specialCharRequirement.classList.toggle('valid-requirement', specialCharRegex.test(password));
+
+            submitBtn.disabled = !(lowercaseRegex.test(password) &&
+                                   uppercaseRegex.test(password) &&
+                                   numberRegex.test(password) &&
+                                   specialCharRegex.test(password));
+        }
+
+        passwordInput.addEventListener('input', validatePasswordRequirements);
+    </script>
+</body>
+</html>
