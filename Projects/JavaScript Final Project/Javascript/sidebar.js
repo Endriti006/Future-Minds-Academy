@@ -20,19 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
     if (page) {
         const pagesExpandS = JSON.parse(page);
         const pagesExpandSee = document.querySelector('.collaps-in');
-        const johnDoeListItem = document.getElementById('johnDoelistItems'); 
+        const johnDoeListItem = document.getElementById('johnDoelistItems');
 
 
         pagesExpandS.forEach(sidebar => {
             const listPage = document.createElement('li');
             listPage.textContent = sidebar;
-            pagesExpandSee.appendChild(listPage); 
+            pagesExpandSee.appendChild(listPage);
         });
 
 
 
 
-        johnDoeListItem.addEventListener('click', function() {
+        johnDoeListItem.addEventListener('click', function () {
             if (pagesExpandSee.style.display === 'none') {
                 pagesExpandSee.style.display = 'block';
             } else {
@@ -42,6 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+const aside = document.getElementById('aside');
+        const shrinkAsideButton = document.getElementById('shrinkAsideButton');
+
+        shrinkAsideButton.addEventListener('click', () => {
+            aside.classList.toggle('shrink');
+        });
 
 
 
