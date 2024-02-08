@@ -1,5 +1,3 @@
-console.log("Hello World2");
-
 
 const pagesExpand = [
     "P Pricing",
