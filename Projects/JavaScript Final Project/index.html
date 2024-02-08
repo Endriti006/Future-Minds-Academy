@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Final Project</title>
+    <title>Javascript Final Project</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
@@ -21,7 +21,7 @@
             </div>
             <hr>
 
-            <div class="listItems">
+            <div class="listItems"id="johnDoelistItems">
                 <div class="listItemsInfo">
                     <img src="assets/images/avatar.jpg" alt="">
                     <p>John Doe</p>
@@ -30,6 +30,7 @@
                     expand_more
                 </span>
             </div>
+            <div class="collaps-in" id="pageExamples"></div>
 
             <hr>
 
@@ -189,23 +190,8 @@
 
                         <div class="notification-container" id="notification">
                             <span class="material-symbols-outlined" title="Notification">notifications</span>
-                            <p class="notification" title="Notification">5</p>
+                            <p class="notification" title="Notification" id="notification-count"></p>
                             <ul class="notification-box">
-                                <li>
-                                    <p>John Doe sent a message</p>
-                                </li>
-                                <li>
-                                    <p>Someone viewed your profile</p>
-                                </li>
-                                <li>
-                                    <p>John Doe sent a message</p>
-                                </li>
-                                <li>
-                                    <p>Someone viewed your profile</p>
-                                </li>
-                                <li>
-                                    <p>Another notification</p>
-                                </li>
                             </ul>
                         </div>
                         <a href="#">
