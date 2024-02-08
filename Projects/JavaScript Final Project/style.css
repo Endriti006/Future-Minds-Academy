@@ -44,6 +44,14 @@ ul {
 }
 
 /* Aside           */
+.shrink {
+    width: 50px; 
+    transition: width 0.3s ease; 
+}
+
+.shrink .listItemsInfo p {
+    display: none; 
+}
 
 .aside {
     overflow-y: auto;
