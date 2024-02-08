@@ -114,6 +114,34 @@ h1 {
 .listItems.active {
     background-color: var(--active-color)
 }
+.collaps-in {
+    display: none;
+    cursor: pointer;
+    color: white;
+    margin: 10px 10px;
+    list-style-type: none;
+}
+.collaps-in li{
+    color: var(--leftmenu-word-color);
+    padding: 17px 10px;
+    display: flex;
+    align-items: center;
+}
+.collaps-in li::after{
+    content: '';
+    flex-grow: 1;
+
+}
+
+.collaps-in li::before {
+    content: '';
+    flex-grow: 1;
+    max-width: 10px;
+}
+.collaps-in li:hover {
+    background-color: grey; 
+}
+
 
 /*    Main           */
 
@@ -332,13 +360,12 @@ header span:hover {
     background-color: var(--right-side-contentBcolor)
 }
 
-.notification-box p {
+.notification-box li {
     margin: 0;
     padding: 10px 10px 10px 20px;
     color: var(--right-side-paragraph-color);
 }
-
-.notification-box p:hover {
+.notification-box li:hover {
     border-radius: 3px;
     background-color: var(--active-color);
     color: var(--leftmenu-word-color);
