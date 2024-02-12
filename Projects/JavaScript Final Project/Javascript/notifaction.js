@@ -1,6 +1,4 @@
-console.log("Hello World1");
-
-let defaultNotifaction=[
+let defaultNotifaction = [
     "New message",
     "Last week's report",
     "Abrakadabra",
@@ -9,9 +7,15 @@ let defaultNotifaction=[
     "Jane Doe wants to connect"
 ];
 
-localStorage.setItem("notifcation",JSON.stringify(defaultNotifaction));
+localStorage.setItem("notifcation", JSON.stringify(defaultNotifaction));
+
+document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    const notificationData = localStorage.getItem("notifcation");
+
+
 
     const notificationData = localStorage.getItem("notifcation");
 
@@ -23,9 +27,13 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('notification-count').innerText = notificationCount;
 
 
+
         const notificationBox = document.querySelector('.notification-box');
 
         
+
+        const notificationBox = document.querySelector('.notification-box');
+
         notifications.forEach(notification => {
             const li = document.createElement('li');
             li.textContent = notification;
@@ -36,19 +44,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    document.addEventListener('DOMContentLoaded', function () {
-        var notificationContainer = document.getElementById('notification');
-        var notificationBox = notificationContainer.querySelector('.notification-box');
+document.addEventListener('DOMContentLoaded', function () {
+    var notificationContainer = document.getElementById('notification');
+    var notificationBox = notificationContainer.querySelector('.notification-box');
 
-       
-        notificationContainer.addEventListener('click', function () {
-            notificationBox.style.visibility = (notificationBox.style.visibility === 'visible') ? 'hidden' : 'visible';
-        });
 
-        document.addEventListener('click', function (event) {
-            if (!notificationContainer.contains(event.target)) {
-                notificationBox.style.visibility = 'hidden';
-            }
-        });
+    notificationContainer.addEventListener('click', function () {
+        notificationBox.style.visibility = (notificationBox.style.visibility === 'visible') ? 'hidden' : 'visible';
     });
+
+    document.addEventListener('click', function (event) {
+        if (!notificationContainer.contains(event.target)) {
+            notificationBox.style.visibility = 'hidden';
+        }
+    });
+});
 
