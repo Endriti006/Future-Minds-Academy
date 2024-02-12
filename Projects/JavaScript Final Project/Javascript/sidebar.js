@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 56649492255489a1252acd105b2998325c97c455
 
 let dropdownItems = document.querySelectorAll('.listItems');
 
