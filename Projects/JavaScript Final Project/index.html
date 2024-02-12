@@ -15,22 +15,34 @@
 <body>
     <div class="container">
         <aside class="aside" id="aside">
-            <div class="aside-h1">
+            <div class="aside-h1" id="titleAside">
                 <h1>CP</h1>
                 <h1>COOL PAGE</h1>
             </div>
             <hr>
 
-            <div class="listItems"id="johnDoelistItems">
+            <div class="listItems" id="johnDoelistItems">
                 <div class="listItemsInfo">
                     <img src="assets/images/avatar.jpg" alt="">
                     <p>John Doe</p>
                 </div>
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined arrow">
                     expand_more
                 </span>
             </div>
-            <div class="collaps-in" id="pageExamples"></div>
+            <ul class="sublist" id="subList">
+                <li>
+                    <span class="firstWord">MP</span>
+                    <span class="secondWord">My Profile</span>
+                </li>
+
+                <li><span class="firstWord">EP</span>
+                    <span class="secondWord">Edit Profile</span>
+                </li>
+                <li><span class="firstWord">S</span>
+                    <span class="secondWord">Settings</span>
+                </li>
+            </ul>
 
             <hr>
 
@@ -42,9 +54,6 @@
                     </span>
                     <p>Dashboard</p>
                 </div>
-                <span class="material-symbols-outlined">
-                    expand_more
-                </span>
             </div>
 
             <a href="#">
@@ -55,10 +64,23 @@
                         </span>
                         <p>Pages</p>
                     </div>
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined arrow" id="arrow">
                         expand_more
                     </span>
                 </div>
+                <ul class="sublist" id="subList">
+                    <li>
+                        <span class="firstWord">P</span>
+                        <span class="secondWord">Pricing</span>
+                    </li>
+
+                    <li><span class="firstWord">RTL</span>
+                        <span class="secondWord">RTL Support</span>
+                    </li>
+                    <li><span class="firstWord">T</span>
+                        <span class="secondWord">Timeline</span>
+                    </li>
+                </ul>
             </a>
 
 
@@ -70,10 +92,23 @@
                         </span>
                         <p>Components</p>
                     </div>
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined arrow" id="arrow">
                         expand_more
                     </span>
                 </div>
+                <ul class="sublist" id="subList">
+                    <li>
+                        <span class="firstWord">B</span>
+                        <span class="secondWord">Buttons</span>
+                    </li>
+
+                    <li><span class="firstWord">GS</span>
+                        <span class="secondWord">Grid System</span>
+                    </li>
+                    <li><span class="firstWord">P</span>
+                        <span class="secondWord">Panels</span>
+                    </li>
+                </ul>
             </a>
 
 
@@ -85,10 +120,23 @@
                         </span>
                         <p>Forms</p>
                     </div>
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined arrow" id="arrow">
                         expand_more
                     </span>
                 </div>
+                <ul class="sublist" id="subList">
+                    <li>
+                        <span class="firstWord">RF</span>
+                        <span class="secondWord">Reuglar Forms</span>
+                    </li>
+
+                    <li><span class="firstWord">EF</span>
+                        <span class="secondWord">Extended Forms</span>
+                    </li>
+                    <li><span class="firstWord">VF</span>
+                        <span class="secondWord">Validation Forms</span>
+                    </li>
+                </ul>
             </a>
 
 
@@ -100,10 +148,23 @@
                         </span>
                         <p>Tables</p>
                     </div>
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined arrow" id="arrow">
                         expand_more
                     </span>
                 </div>
+                <ul class="sublist" id="subList">
+                    <li>
+                        <span class="firstWord">RT</span>
+                        <span class="secondWord">Regular Tables</span>
+                    </li>
+
+                    <li><span class="firstWord">ET</span>
+                        <span class="secondWord">Extended Tables</span>
+                    </li>
+                    <li><span class="firstWord">S</span>
+                        <span class="secondWord">Settings</span>
+                    </li>
+                </ul>
             </a>
 
             <a href="#">
@@ -114,10 +175,23 @@
                         </span>
                         <p>Maps</p>
                     </div>
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined arrow">
                         expand_more
                     </span>
                 </div>
+                <ul class="sublist" id="subList">
+                    <li>
+                        <span class="firstWord">GM</span>
+                        <span class="secondWord">Google Maps</span>
+                    </li>
+
+                    <li><span class="firstWord">FSM</span>
+                        <span class="secondWord">Full Screen Map</span>
+                    </li>
+                    <li><span class="firstWord">VM</span>
+                        <span class="secondWord">Google Maps</span>
+                    </li>
+                </ul>
             </a>
 
 
@@ -129,9 +203,6 @@
                         </span>
                         <p>Widgets</p>
                     </div>
-                    <span class="material-symbols-outlined">
-                        expand_more
-                    </span>
                 </div>
             </a>
 
@@ -143,9 +214,6 @@
                         </span>
                         <p>Charts</p>
                     </div>
-                    <span class="material-symbols-outlined">
-                        expand_more
-                    </span>
                 </div>
             </a>
 
@@ -158,9 +226,7 @@
                         </span>
                         <p>Calendar</p>
                     </div>
-                    <span class="material-symbols-outlined">
-                        expand_more
-                    </span>
+
                 </div>
             </a>
         </aside>
@@ -168,8 +234,8 @@
         <div class="rightSideMain">
             <header>
                 <div class="header-left">
-                    <div class="circle-button" id="shrinkAsideButton">
-                        <span class="material-symbols-outlined" title="See More">more_vert</span>
+                    <div class="circle-button">
+                        <span class="material-symbols-outlined" id="collapse-btn" title="See More">more_vert</span>
                     </div>
                     <p>Dashboard</p>
                 </div>
@@ -326,19 +392,21 @@
 
                 <section class="manage-list-container">
                     <p class="manageTitle">Manage Listings</p>
-                    <div class="manage-list-item">
+                    <div class="manage-list-item" id="listing1">
                         <div class="manage-list-item-animation">
                             <img src="assets/images/card-1.jpeg" class="manage-list-item-img">
 
                             <div class="manage-list-item-edits">
                                 <span class="material-symbols-outlined grey" title="View">preview</span>
-                                <span class="material-symbols-outlined grenspan" title="Edit">done</span>
-                                <span class="material-symbols-outlined red" title="Delete">close</span>
+                                <span class="material-symbols-outlined grenspan" id="updateParagraph1"
+                                    title="Edit">done</span>
+                                <span class="material-symbols-outlined red" id="Delete1" title="Delete">close</span>
                             </div>
                         </div>
 
-                        <p class="manage-list-item-title">Cozy 5 Stars Apartment</p>
-                        <p class="manage-list-item-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing
+                        <p class="manage-list-item-title" id="EditTitle1">Cozy 5 Stars Apartment</p>
+                        <p class="manage-list-item-paragraph" id="EditParagraph1">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
                             elit.
                             Quos,
                             facilis consectetur harum et rem quidem ut
@@ -357,14 +425,15 @@
                         </div>
                     </div>
 
-                    <div class="manage-list-item">
+                    <div class="manage-list-item" id="listing2">
                         <div class="manage-list-item-animation">
                             <img src="assets/images/card-2.jpeg" class="manage-list-item-img">
 
                             <div class="manage-list-item-edits">
                                 <span class="material-symbols-outlined grey" title="View">preview</span>
-                                <span class="material-symbols-outlined grenspan" title="Edit">done</span>
-                                <span class="material-symbols-outlined red" title="Delete">close</span>
+                                <span class="material-symbols-outlined grenspan" id="updateParagraph2"
+                                    title="Edit">done</span>
+                                <span class="material-symbols-outlined red" id="Delete2" title="Delete">close</span>
                             </div>
                         </div>
 
@@ -388,14 +457,16 @@
                         </div>
                     </div>
 
-                    <div class="manage-list-item">
+                    <div class="manage-list-item" id="listing3">
                         <div class="manage-list-item-animation">
                             <img src="assets/images/card-3.jpeg" class="manage-list-item-img">
 
                             <div class="manage-list-item-edits">
                                 <span class="material-symbols-outlined grey" title="View">preview</span>
-                                <span class="material-symbols-outlined grenspan" title="Edit">done</span>
-                                <span class="material-symbols-outlined red" title="Delete">close</span>
+                                <span class="material-symbols-outlined grenspan" id="updateParagraph3"
+                                    title="Edit">done</span>
+                                <span class="material-symbols-outlined red" id="Delete3" id="Delete"
+                                    title="Delete">close</span>
                             </div>
                         </div>
 
@@ -443,10 +514,36 @@
             </footer>
         </div>
 
-        </main>
+        <div class="setting-container">
+            <span id="settings-icon" class="material-symbols-outlined">settings</span>
+            <div class="setting-box" id="setting-box">
+                <p>SIDEBAR FILTERS</p>
+                <ul class="color-settings">
+                    <li class="color-purple"></li>
+                    <li class="color-blue"></li>
+                    <li class="color-green"></li>
+                    <li class="color-orange"></li>
+                    <li class="color-red"></li>
+                    <li class="color-rose active"></li>
+                </ul>
+                <hr>
+                <p>SIDEBAR BACKGROUND</p>
+                <ul class="sidebar-color-settings">
+                    <li class="color-white"></li>
+                    <li class="color-black active"></li>
+                </ul>
+                <hr>
+                <p>SIDEBAR image</p>
+
+            </div>
+        </div>
 
     </div>
-    <script src="./Javascript/index.js"  type="module"></script>
+
+    </main>
+
+    </div>
+    <script src="./Javascript/index.js" type="module"></script>
 </body>
 
 </html>
