@@ -12,21 +12,20 @@ let defaultNotifaction=[
 localStorage.setItem("notifcation",JSON.stringify(defaultNotifaction));
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Retrieve data from local storage
+
     const notificationData = localStorage.getItem("notifcation");
 
-    // Check if data exists in local storage
+
     if (notificationData) {
         const notifications = JSON.parse(notificationData);
 
-        // Update notification count
         const notificationCount = notifications.length;
         document.getElementById('notification-count').innerText = notificationCount;
 
-        // Get the notification box element
+
         const notificationBox = document.querySelector('.notification-box');
 
-        // Iterate through notifications and add them to the notification box
+        
         notifications.forEach(notification => {
             const li = document.createElement('li');
             li.textContent = notification;
