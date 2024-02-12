@@ -76,11 +76,11 @@ colorSettings.addEventListener("click", (e) => {
   activeItem.style.backgroundColor = activeColor;
 });
 
-// Select sidebar and color settings 
+
 const sidebar = document.querySelector(".aside");
 const colorSettings1 = document.querySelector(".sidebar-color-settings");
 
-// Update sidebar bg directly on select
+
 colorSettings1.addEventListener("click", (e) => {
 
     if(e.target.classList.contains("color-black")) {
