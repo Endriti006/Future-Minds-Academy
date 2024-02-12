@@ -11,13 +11,11 @@ localStorage.setItem("notifcation", JSON.stringify(defaultNotifaction));
 
 document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded", function() {
 
     const notificationData = localStorage.getItem("notifcation");
 
 
 
-    const notificationData = localStorage.getItem("notifcation");
 
 
     if (notificationData) {
@@ -32,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
 
-        const notificationBox = document.querySelector('.notification-box');
+      
 
         notifications.forEach(notification => {
             const li = document.createElement('li');
