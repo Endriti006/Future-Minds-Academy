@@ -37,8 +37,8 @@ ul {
 .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 10fr;
-    grid-template-columns: auto 10fr;
+    -ms-grid-columns: 1fr 10fr;
+    grid-template-columns: 1fr 8fr;
     height: 100vh;
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
@@ -57,22 +57,34 @@ ul {
     background-blend-mode: color;
 }
 
-.aside .aside.collapsed {
+.aside .collapsed {
+    text-align: center;
     width: 60px;
 }
+
 
 .aside.collapsed .aside-h1 h1:nth-child(2) {
     display: none;
 }
 
 .aside.collapsed .material-symbols-outlined {
+    margin: auto;
+    line-height: 50px;
+    text-align: center;
     width: 50px;
     height: 50px;
 }
+.aside.collapsed .listItems {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+  }
 
 .aside.collapsed .listItemsInfo img {
     width: 35px;
     height: 35px;
+    margin: 0;
 }
 
 .aside.collapsed .listItemsInfo p,
@@ -806,6 +818,7 @@ hr {
 .setting-container {
     position: fixed;
     top: 100px;
+    right: 0px;
     background-color: rgba(211, 211, 211, 0.8);
     padding: 10px 20px;
     border-radius: 8px 0px 0px 8px;
