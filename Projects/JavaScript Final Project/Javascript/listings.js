@@ -10,7 +10,8 @@ const listing1 = {
     location: {
         city: 'Barcelona',
         country: 'Spain'
-    }
+    },
+    image:'<img src="https://i.ibb.co/YtY976W/sidebar-1.jpg" alt="sidebar-1" border="0">'
 }
 
 const listing2 = {
@@ -37,7 +38,15 @@ const listing3 = {
     }
 }
 
-localStorage.setItem(listing1.id, JSON.stringify(listing1));
+
+
+
+
+
+
+
+
+/*localStorage.setItem(listing1.id, JSON.stringify(listing1));
 localStorage.setItem(listing2.id, JSON.stringify(listing2));
 localStorage.setItem(listing3.id, JSON.stringify(listing3));
 
@@ -73,12 +82,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, true); 
 });
+*/
 
 
 
 
 
 
+/*
 const listingElement2 = document.getElementById('listing2');
 listingElement2.querySelector('.manage-list-item-title').textContent = listing2.name;
 listingElement.querySelector('.manage-list-item-paragraph').textContent = listing2.description;
@@ -145,4 +156,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, true);
 });
-
+*/
