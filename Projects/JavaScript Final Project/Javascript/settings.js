@@ -1,4 +1,4 @@
-console.log("Hello World3");
+
 
 const colorItems = document.querySelectorAll('.color-settings li');
 
