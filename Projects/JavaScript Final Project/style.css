@@ -37,17 +37,18 @@ ul {
 .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 10fr;
-    grid-template-columns: 1fr 8fr;
+    -ms-grid-columns: auto 10fr;
+    grid-template-columns: auto 10fr;
     height: 100vh;
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
 }
 
 /* Aside           */
-.listItems.active {
+#dashboardItem {
     background-color: var(--dashboard-color);
 }
+
 
 .aside {
     overflow-y: auto;
@@ -57,11 +58,9 @@ ul {
     background-blend-mode: color;
 }
 
-.aside .collapsed {
-    text-align: center;
+.aside .aside.collapsed {
     width: 60px;
 }
-
 
 .aside.collapsed .aside-h1 h1:nth-child(2) {
     display: none;
@@ -69,28 +68,24 @@ ul {
 
 .aside.collapsed .material-symbols-outlined {
     margin: auto;
-    line-height: 50px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
 }
-.aside.collapsed .listItems {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    height: 60px;
-  }
 
 .aside.collapsed .listItemsInfo img {
+    margin: auto;
     width: 35px;
     height: 35px;
-    margin: 0;
 }
 
 .aside.collapsed .listItemsInfo p,
 .aside.collapsed .aside-h1 h1 {
     display: none;
 }
+
+.aside.collapsed .listItems {
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;  
+  }
 
 .aside.collapsed .arrow {
     display: none;
@@ -220,7 +215,6 @@ h1 {
     grid-template-columns: 1fr;
     background-color: var(--right-side-bColor);
 }
-
 /*   HEADER     */
 
 header {
@@ -791,6 +785,10 @@ hr {
     color: rgb(72, 72, 72, 0.1);
 }
 
+.edit-mode {
+    border: 1px solid #ccc;
+}
+
 /*    FOOTER              */
 
 .footer-container {
@@ -838,7 +836,8 @@ hr {
     padding: 10px;
     border-radius: 8px;
     z-index: 999;
-    width: 15rem;
+    width: 19rem;
+    cursor: pointer;
 }
 
 .color-settings{
@@ -903,6 +902,16 @@ hr {
 
 .sidebar-color-settings li.active {
     border: 2px solid #ff007f;
+}
+
+.SidebarBackgroundImage{
+    display: flex;
+    justify-content: center;
+}
+
+.SidebarBackgroundImage img{
+    width: 70px;
+    margin: 0 5px;
 }
 
 /*       Tablet Media               */
