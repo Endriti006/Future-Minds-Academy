@@ -3,7 +3,7 @@ console.log("Hello World4");
 
 const listing1 = {
     id: 1,
-    name: "Cozy 5 Start Apartaments",
+    name: "Cozy 5 Star Apartaments",
     description: "A short description",
     price: 899,
     currency: '$',
@@ -11,7 +11,7 @@ const listing1 = {
         city: 'Barcelona',
         country: 'Spain'
     },
-    image:'<img src="https://i.ibb.co/YtY976W/sidebar-1.jpg" alt="sidebar-1" border="0">'
+    image: 'assets/images/card-1.jpeg'
 }
 
 const listing2 = {
@@ -23,7 +23,8 @@ const listing2 = {
     location: {
         city: 'London',
         country: 'UK'
-    }
+    },
+    image: 'assets/images/card-2.jpeg'
 }
 
 const listing3 = {
@@ -35,125 +36,73 @@ const listing3 = {
     location: {
         city: 'Milan',
         country: 'Italy'
-    }
+    },
+    image: 'assets/images/card-3.jpeg'
 }
 
 
+const listings = JSON.parse(localStorage.getItem('listings')) || [];
 
+const manageListContainer = document.querySelector('.manage-list-container');
 
-
-
-
-
-
-/*localStorage.setItem(listing1.id, JSON.stringify(listing1));
-localStorage.setItem(listing2.id, JSON.stringify(listing2));
-localStorage.setItem(listing3.id, JSON.stringify(listing3));
-
-const listingElement = document.getElementById('listing1');
-listingElement.querySelector('.manage-list-item-title').textContent = listing1.name;
-listingElement.querySelector('.manage-list-item-paragraph').textContent = listing1.description;
-listingElement.querySelector('.manage-list-item-bottom p').textContent = `${listing1.currency}${listing1.price}/night`;
-listingElement.querySelector('.manage-list-item-bottom-right p').textContent = `${listing1.location.city}, ${listing1.location.country}`;
-
-const deleteSpanListing1 = document.querySelector('#Delete1');
-deleteSpanListing1.addEventListener('click', function () {
-    const listItem = deleteSpanListing1.closest('.manage-list-item');
-    listItem.remove();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const editSpan1 = document.getElementById('updateParagraph1');
-
-    editSpan1.addEventListener('click', function(){
-        const paragraphs = document.querySelectorAll('#listing1 p');
-
-        paragraphs.forEach(function(paragraph) {
-            paragraph.contentEditable = true;
-            paragraph.focus();
-        });
-    });
-
+function renderListings() {
+    manageListContainer.innerHTML = ''; 
     
-    const listing1 = document.getElementById('listing1');
-    listing1.addEventListener('blur', function(event) {
-        if (event.target.tagName === 'p') {
-            event.target.contentEditable = false;
-        }
-    }, true); 
-});
-*/
+    if (listings.length === 0) {
+   
+        manageListContainer.innerHTML = '<p>No listings available</p>';
+        return;
+    }
 
+    listings.forEach(listing => {
+        const listingContainer = document.createElement('div');
+        listingContainer.classList.add('manage-list-item');
+        listingContainer.id = 'listing' + listing.id;
 
+        listingContainer.innerHTML = `
+            <div class="manage-list-item-animation">
+                <img src="${listing.image}" class="manage-list-item-img">
+                <div class="manage-list-item-edits">
+                    <span class="material-symbols-outlined grey" title="View">preview</span>
+                    <span class="material-symbols-outlined grenspan editIcon" id="updateParagraph${listing.id}" title="Edit">edit</span>
+                    <span class="material-symbols-outlined red deleteIcon" id="Delete${listing.id}" title="Delete">close</span>
+                </div>
+            </div>
+            <p class="manage-list-item-title">${listing.name}</p>
+            <p class="manage-list-item-paragraph">${listing.description}</p>
+            <hr>
+            <div class="manage-list-item-bottom">
+                <p>${listing.currency}${listing.price}/night</p>
+                <div class="manage-list-item-bottom-right">
+                    <span class="material-symbols-outlined gray" title="Delete">location_on</span>
+                    <p>${listing.location.city}, ${listing.location.country}</p>
+                </div>
+            </div>
+        `;
 
+        manageListContainer.appendChild(listingContainer);
 
+        const editIcon = listingContainer.querySelector('.editIcon');
+        editIcon.addEventListener('click', function () {
+         
+        });
 
-
-/*
-const listingElement2 = document.getElementById('listing2');
-listingElement2.querySelector('.manage-list-item-title').textContent = listing2.name;
-listingElement.querySelector('.manage-list-item-paragraph').textContent = listing2.description;
-listingElement.querySelector('.manage-list-item-bottom p').textContent = `${listing2.currency}${listing2.price}/night`;
-listingElement.querySelector('.manage-list-item-bottom-right p').textContent = `${listing2.location.city}, ${listing2.location.country}`;
-
-const deleteSpanListing2 = document.querySelector('#Delete2');
-deleteSpanListing2.addEventListener('click', function () {
-    const listItem2 = deleteSpanListing2.closest('.manage-list-item');
-    listItem2.remove();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const editSpan2 = document.getElementById('updateParagraph2');
-
-    editSpan2.addEventListener('click', function(){
-        const paragraphs2 = document.querySelectorAll('#listing2 p');
-
-        paragraphs2.forEach(function(paragraph) {
-            paragraph.contentEditable = true;
-            paragraph.focus();
+        deleteIcon.addEventListener('click', function () {
+            let listItem = this.closest('.manage-list-item');
+            let cardId = listItem.id.replace('listing', '');
+        
+            listItem.remove();
+        
+            let indexToDelete = listings.findIndex(listing => listing.id === parseInt(cardId));
+            if (indexToDelete !== -1) {
+                listings.splice(indexToDelete, 1);
+                localStorage.setItem('listings', JSON.stringify(listings));
+        
+                if (listings.length === 0) {
+                    renderListings();
+                }
+            }
         });
     });
-
-    const listing2 = document.getElementById('listing2');
-    listing2.addEventListener('blur', function(event) {
-        if (event.target.tagName === 'p') {
-            event.target.contentEditable = false;
-        }
-    }, true);
-});
-
-
-
-
-const listingElement3 = document.getElementById('listing3');
-listingElement2.querySelector('.manage-list-item-title').textContent = listing3.name;
-listingElement.querySelector('.manage-list-item-paragraph').textContent = listing3.description;
-listingElement.querySelector('.manage-list-item-bottom p').textContent = `${listing3.currency}${listing3.price}/night`;
-listingElement.querySelector('.manage-list-item-bottom-right p').textContent = `${listing3.location.city}, ${listing3.location.country}`;
-
-const deleteSpanListing3 = document.querySelector('#Delete3')
-deleteSpanListing3.addEventListener('click', function () {
-    const listItem3 = deleteSpanListing3.closest('.manage-list-item');
-    listItem3.remove();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const editSpan3 = document.getElementById('updateParagraph3');
-
-    editSpan3.addEventListener('click', function(){
-        const paragraphs3 = document.querySelectorAll('#listing3 p');
-
-        paragraphs3.forEach(function(paragraph) {
-            paragraph.contentEditable = true;
-            paragraph.focus();
-        });
-    });
-
-    const listing3 = document.getElementById('listing3');
-    listing3.addEventListener('blur', function(event) {
-        if (event.target.tagName === 'p') {
-            event.target.contentEditable = false;
-        }
-    }, true);
-});
-*/
+}
+renderListings();
