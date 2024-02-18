@@ -21,12 +21,18 @@ dropdownItems.forEach(item => {
 
 
 
-// JavaScript
-
 const aside = document.getElementById('aside');
 const collapseBtn = document.getElementById('collapse-btn');
 
 collapseBtn.addEventListener('click', () => {
-  aside.classList.toggle('collapsed');
-  
+    aside.classList.toggle('collapsed');
+    const collapseIcon = document.getElementById('collapse-btn');
+
+    if (aside.classList.contains('collapsed')) {
+        collapseIcon.innerHTML = 'view_headline';
+        collapseIcon.title = 'Profile';
+    } else {
+        collapseIcon.innerHTML = 'more_vert';
+        collapseIcon.title = 'See More';
+    }
 });
