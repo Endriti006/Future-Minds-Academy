@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const notificationBox = document.querySelector('.notification-box');
 
-        
-
-      
-
         notifications.forEach(notification => {
             const li = document.createElement('li');
             li.textContent = notification;
