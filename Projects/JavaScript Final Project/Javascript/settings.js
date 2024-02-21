@@ -74,6 +74,15 @@ colorSettings.addEventListener("click", (e) => {
   localStorage.setItem('activeColor', activeColor);
 
   activeItem.style.backgroundColor = activeColor;
+  document.documentElement.style.setProperty('--active-color', activeColor); 
+});
+
+window.addEventListener('load', () => {
+  const storedColor = localStorage.getItem('activeColor');
+  if (storedColor) {
+    activeItem.style.backgroundColor = storedColor;
+    document.documentElement.style.setProperty('--active-color', storedColor); 
+  }
 });
 
 window.addEventListener('load', () => {

@@ -1,108 +1,124 @@
 
-console.log("Hello World4");
-
-const listing1 = {
-    id: 1,
-    name: "Cozy 5 Star Apartaments",
-    description: "A short description",
-    price: 899,
-    currency: '$',
-    location: {
-        city: 'Barcelona',
-        country: 'Spain'
+let defaultListings = [
+    {
+        id: 1,
+        image: 'assets/images/card-1.jpeg',
+        name: 'Cozy 5 Stars Apartment',
+        description: 'A short description',
+        price: 899,
+        currency: '$',
+        location: {
+            city: 'Barcelona',
+            country: 'Spain'
+        }
     },
-    image: 'assets/images/card-1.jpeg'
+    {
+        id: 2,
+        image: 'assets/images/card-2.jpeg',
+        name: 'Office Studio',
+        description: 'A short description',
+        price: 1119,
+        currency: '$',
+        location: {
+            city: 'London',
+            country: 'UK'
+        }
+    },
+    {
+        id: 3,
+        image: 'assets/images/card-3.jpeg',
+        name: 'Beautiful Castle',
+        description: 'A short description',
+        price: 459,
+        currency: '$',
+        location: {
+            city: 'Milan',
+            country: 'Italy'
+        }
+    },
+];
+
+let listing;
+
+if (localStorage.getItem('listings')) {
+    listing = JSON.parse(localStorage.getItem('listings'));
+    if (listing.length === 0)
+        listing = defaultListings;
+} else {
+    listing = defaultListings;
+    localStorage.setItem('listings', JSON.stringify(listing));
 }
 
-const listing2 = {
-    id: 2,
-    name: "Office Studio",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, nam!",
-    price: 1119,
-    currency: '$',
-    location: {
-        city: 'London',
-        country: 'UK'
-    },
-    image: 'assets/images/card-2.jpeg'
-}
+let manageListContainer = document.getElementById('manage-list');
+console.log(defaultListings);
 
-const listing3 = {
-    id: 3,
-    name: "Beautiful Castle",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero voluptatibus sapiente odio cupiditate? Ipsam ad quia repellendus dolor, deleniti unde.",
-    price: 459,
-    currency: '$',
-    location: {
-        city: 'Milan',
-        country: 'Italy'
-    },
-    image: 'assets/images/card-3.jpeg'
-}
-
-
-const listings = JSON.parse(localStorage.getItem('listings')) || [];
-
-const manageListContainer = document.querySelector('.manage-list-container');
-
-function renderListings() {
-    manageListContainer.innerHTML = ''; 
-    
-    if (listings.length === 0) {
-   
-        manageListContainer.innerHTML = '<p>No listings available</p>';
-        return;
-    }
-
-    listings.forEach(listing => {
-        const listingContainer = document.createElement('div');
-        listingContainer.classList.add('manage-list-item');
-        listingContainer.id = 'listing' + listing.id;
-
-        listingContainer.innerHTML = `
+listing.forEach(item => {
+    let listItem = document.createElement('div');
+    listItem.classList.add('manage-list-item');
+    listItem.innerHTML = `
             <div class="manage-list-item-animation">
-                <img src="${listing.image}" class="manage-list-item-img">
+                <img src="${item.image}" class="manage-list-item-img">
                 <div class="manage-list-item-edits">
                     <span class="material-symbols-outlined grey" title="View">preview</span>
-                    <span class="material-symbols-outlined grenspan editIcon" id="updateParagraph${listing.id}" title="Edit">edit</span>
-                    <span class="material-symbols-outlined red deleteIcon" id="Delete${listing.id}" title="Delete">close</span>
+                    <span class="material-symbols-outlined grenspan editIcon" id="updateParagraph${item.id}" title="Edit">edit</span>
+                    <span class="material-symbols-outlined red deleteIcon" id="Delete${item.id}" title="Delete">close</span>
                 </div>
             </div>
-            <p class="manage-list-item-title">${listing.name}</p>
-            <p class="manage-list-item-paragraph">${listing.description}</p>
+            <p class="manage-list-item-title" contenteditable="false">${item.name}</p>
+            <p class="manage-list-item-paragraph" contenteditable="false">${item.description}</p>
             <hr>
             <div class="manage-list-item-bottom">
-                <p>${listing.currency}${listing.price}/night</p>
+                <p class="manage-list-item-price" contenteditable="false">${item.currency}${item.price}/night</p>
                 <div class="manage-list-item-bottom-right">
-                    <span class="material-symbols-outlined gray" title="Delete">location_on</span>
-                    <p>${listing.location.city}, ${listing.location.country}</p>
+                    <span class="material-symbols-outlined gray-span" title="Delete">location_on</span>
+                    <p class="manage-list-item-location" contenteditable="false">${item.location.city}, ${item.location.country}</p>
                 </div>
             </div>
         `;
 
-        manageListContainer.appendChild(listingContainer);
+    manageListContainer.appendChild(listItem);
 
-        const editIcon = listingContainer.querySelector('.editIcon');
-        editIcon.addEventListener('click', function () {
-         
-        });
+    let editBtn = listItem.querySelector('.editIcon');
+    editBtn.addEventListener('click', () => {
+        if (editBtn.textContent === 'edit') {
+            editBtn.textContent = 'save';
+            listItem.querySelectorAll('[contenteditable="false"]').forEach(element => {
+                element.contentEditable = true;
+            });
+        } else {
+            editBtn.textContent = 'edit';
+            listItem.querySelectorAll('[contenteditable="true"]').forEach(element => {
+                element.contentEditable = false;
+            });
+            
 
-        deleteIcon.addEventListener('click', function () {
-            let listItem = this.closest('.manage-list-item');
-            let cardId = listItem.id.replace('listing', '');
-        
-            listItem.remove();
-        
-            let indexToDelete = listings.findIndex(listing => listing.id === parseInt(cardId));
-            if (indexToDelete !== -1) {
-                listings.splice(indexToDelete, 1);
-                localStorage.setItem('listings', JSON.stringify(listings));
-        
-                if (listings.length === 0) {
-                    renderListings();
-                }
-            }
-        });
+            item.name = listItem.querySelector('.manage-list-item-title').textContent;
+            item.description = listItem.querySelector('.manage-list-item-paragraph').textContent;
+            item.price = parseInt(listItem.querySelector('.manage-list-item-price').textContent);
+            item.location.city = listItem.querySelector('.manage-list-item-location').textContent.split(',')[0];
+            item.location.country = listItem.querySelector('.manage-list-item-location').textContent.split(',')[1];
+            
+            updateLocalStorage(listing);
+        }
     });
+
+
+
+    listItem.querySelector('.deleteIcon').addEventListener('click', () => {
+        let itemId = item.id;
+        removeItemFromLocalStorage(itemId);
+        manageListContainer.removeChild(listItem);
+        listing = listing.filter(listingItem => listingItem.id !== itemId);
+        updateLocalStorage(listing);
+    });
+});
+
+function removeItemFromLocalStorage(id) {
+    let storedListing = JSON.parse(localStorage.getItem('listings'));
+    let updatedListing = storedListing.filter(item => item.id !== id);
+    localStorage.setItem('listings', JSON.stringify(updatedListing));
 }
-renderListings();
+
+function updateLocalStorage(listing) {
+    localStorage.setItem('listings', JSON.stringify(listing));
+}
