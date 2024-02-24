@@ -9,7 +9,7 @@ dropdownItems.forEach(item => {
         item.addEventListener('click', () => {
             sublist.classList.toggle('active');
             item.classList.toggle('active');
-            sublist.style.height = sublist.classList.contains('active') ? sublist.scrollHeight + 'px' : '0'; // Set height to auto to trigger transition
+            sublist.style.height = sublist.classList.contains('active') ? sublist.scrollHeight + 'px' : '0'; 
         });
     }
 });
