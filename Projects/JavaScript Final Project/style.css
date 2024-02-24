@@ -56,7 +56,7 @@ ul {
     background-image: var(--leftmenu-background-image);
     background-color: rgb(0, 0, 0, 0.7);
     background-blend-mode: color;
-    
+    transition: width 0.3s ease;
 }
 
 .aside .aside.collapsed {
@@ -95,6 +95,8 @@ ul {
     justify-content: center;
     height: 60px;
   }
+
+
 
 .aside.collapsed .arrow {
     display: none;
@@ -167,8 +169,12 @@ h1 {
     color: var(--leftmenu-word-color);
     margin: 10px 30px;
     padding: 0;
-    display: none;
-    transition: height 0.3s ease-in-out;
+    overflow: hidden; 
+    height: 0; 
+    transition: height 0.5s ease; 
+}
+.sublist.active {
+    height: auto;
 }
 
 .sublist li:hover {
@@ -910,7 +916,7 @@ hr {
     background-color: black;
 }
 
-.sidebar-color-settings li.active {
+.sidebar-color-settings li.active.with-border {
     border: 2px solid #ff007f;
 }
 
