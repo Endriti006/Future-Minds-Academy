@@ -96,6 +96,7 @@ window.addEventListener('load', () => {
 //To change the background image
 const images = document.querySelectorAll('.SidebarBackgroundImage img');
 const aside = document.querySelector('.aside');
+const toogleImageChekbox =document.getElementById('toggle-image');
 
 
 function saveImageToLocalStorage(imageSrc) {
@@ -119,6 +120,18 @@ images.forEach(image => {
         setBackgroundImage(selectedImageSrc);
         saveImageToLocalStorage(selectedImageSrc);
     });
+});
+
+toogleImageChekbox.addEventListener('change',()=>{
+const lastSelectedImageSrc= getSelectedImageFromLocalStorage();
+if(toogleImageChekbox.checked){
+  aside.style.backgroundImage ='none';
+}else{
+  if(lastSelectedImageSrc){
+    setBackgroundImage(lastSelectedImageSrc);
+  }
+}
+
 });
 
 
