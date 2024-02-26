@@ -1,24 +1,18 @@
 
-
-let dropdownItems = document.querySelectorAll('.listItems');
-
+const dropdownItems = document.querySelectorAll('.listItems');
 
 dropdownItems.forEach(item => {
-
     let sublist = item.nextElementSibling;
     let arrow = item.querySelector('.arrow')
 
-
     if (sublist && sublist.classList.contains('sublist')) {
-
         item.addEventListener('click', () => {
-            sublist.style.display = sublist.style.display === 'block' ? 'none' : 'block';
             sublist.classList.toggle('active');
             item.classList.toggle('active');
+            sublist.style.height = sublist.classList.contains('active') ? sublist.scrollHeight + 'px' : '0'; 
         });
     }
 });
-
 
 
 const aside = document.getElementById('aside');

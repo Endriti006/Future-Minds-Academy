@@ -96,6 +96,7 @@ window.addEventListener('load', () => {
 //To change the background image
 const images = document.querySelectorAll('.SidebarBackgroundImage img');
 const aside = document.querySelector('.aside');
+const toogleImageChekbox =document.getElementById('toggle-image');
 
 
 function saveImageToLocalStorage(imageSrc) {
@@ -121,6 +122,18 @@ images.forEach(image => {
     });
 });
 
+toogleImageChekbox.addEventListener('change',()=>{
+const lastSelectedImageSrc= getSelectedImageFromLocalStorage();
+if(toogleImageChekbox.checked){
+  aside.style.backgroundImage ='none';
+}else{
+  if(lastSelectedImageSrc){
+    setBackgroundImage(lastSelectedImageSrc);
+  }
+}
+
+});
+
 
 window.addEventListener('load', () => {
     const lastSelectedImageSrc = getSelectedImageFromLocalStorage();
@@ -134,10 +147,9 @@ window.addEventListener('load', () => {
 const colorSettings1 = document.querySelector(".sidebar-color-settings");
 
 
-let sidebarColor = localStorage.getItem('sidebarColor') || "rgba(200, 200, 200, 0.2)"; // Default color if not set
-
+let sidebarColor = localStorage.getItem('sidebarColor') || "rgba(200, 200, 200, 0.2)"; 
 aside.style.backgroundColor = sidebarColor;
-aside.style.backgroundBlendMode = sidebarColor === "rgba(200, 200, 200, 0.2)" ? "normal" : "color"; // Changed sidebar to aside
+aside.style.backgroundBlendMode = sidebarColor === "rgba(200, 200, 200, 0.2)" ? "normal" : "color";
 
 colorSettings1.addEventListener("click", (e) => {
   if (e.target.classList.contains("color-black")) {
@@ -159,6 +171,6 @@ window.addEventListener('load', () => {
   const storedSidebarColor = localStorage.getItem('sidebarColor');
   if (storedSidebarColor) {
     aside.style.backgroundColor = storedSidebarColor;
-    aside.style.backgroundBlendMode = storedSidebarColor === "rgba(200, 200, 200, 0.2)" ? "normal" : "color"; // Changed sidebar to aside
+    aside.style.backgroundBlendMode = storedSidebarColor === "rgba(200, 200, 200, 0.2)" ? "normal" : "color"; 
   }
 });
