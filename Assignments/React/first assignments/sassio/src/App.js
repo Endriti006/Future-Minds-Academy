@@ -16,7 +16,7 @@ function App() {
         paragraph={`Besides its beautiful design.\nSassio is an incredibly 
         rich core\nframework for you to showcase your App.`}
         buttonDownload="Get it on"
-        appleText="Google Play"
+        appleText="Gooogle Play"
       />
     </div>
   );
