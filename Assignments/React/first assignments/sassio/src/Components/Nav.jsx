@@ -16,7 +16,7 @@ export default function Nav(props) {
             <li><a href="services.html" className={props.activePage}>Services</a></li>
             <li><a href="portfolio.html" className={props.activePage}>Portfolio</a></li>
             <li><a href="contact.html" className={props.activePage}>Contact Us</a></li>
-            <li><a href="blog.html" className={props.activePage}>Blog</a></li>
+            <li><a href="blog" className={props.activePage}>Blog</a></li>
             <li className="button"><a href="index.html">Get the App</a></li>
           </ul>              
         </div>
