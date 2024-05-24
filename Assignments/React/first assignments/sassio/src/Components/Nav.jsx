@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav(props) {
   return (
@@ -11,23 +12,23 @@ export default function Nav(props) {
         <span className="material-symbols-outlined">menu</span>
         <div className="notification-down">
           <ul>
-            <li><a href="index.html" className={props.activePage}>Home</a></li>
-            <li><a href="about.html" className={props.activePage}>About Us</a></li>
-            <li><a href="services.html" className={props.activePage}>Services</a></li>
-            <li><a href="portfolio.html" className={props.activePage}>Portfolio</a></li>
-            <li><a href="contact.html" className={props.activePage}>Contact Us</a></li>
-            <li><a href="blog" className={props.activePage}>Blog</a></li>
-            <li className="button"><a href="index.html">Get the App</a></li>
+            <li><Link to="/" className={props.activePage}>Home</Link></li>
+            <li><Link to="/about" className={props.activePage}>About Us</Link></li>
+            <li><Link to="/services" className={props.activePage}>Services</Link></li>
+            <li><Link to="/portfolio" className={props.activePage}>Portfolio</Link></li>
+            <li><Link to="/contact" className={props.activePage}>Contact Us</Link></li>
+            <li><Link to="/blog" className={props.activePage}>Blog</Link></li>
+            <li className="button"><Link to="/get-the-app">Get the App</Link></li>
           </ul>              
         </div>
       </div>
       <div className="col navigation-col">
-        <a href="index.html" className={props.activePage}>Home</a>
-        <a href="about.html" className={props.activePage}>About Us</a>
-        <a href="services.html" className={props.activePage}>Services</a>
-        <a href="portfolio.html" className={props.activePage}>Portfolio</a>
-        <a href="contact.html" className={props.activePage}>Contact Us</a>
-        <a href="blog.html" className={props.activePage}>Blog</a>
+        <Link to="/" className={props.activePage}>Home</Link>
+        <Link to="/about" className={props.activePage}>About Us</Link>
+        <Link to="/services" className={props.activePage}>Services</Link>
+        <Link to="/portfolio" className={props.activePage}>Portfolio</Link>
+        <Link to="/contact" className={props.activePage}>Contact Us</Link>
+        <Link to="/blog" className={props.activePage}>Blog</Link>
       </div>
       <div className="col btn-primary">
         <button className="btn-white">Join</button>
