@@ -9,11 +9,13 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Services from './Pages/Services';
 
 
 const router = createBrowserRouter([
   {path: '/', element: <Home />},
-  {path: '/about', element: <About />}
+  {path: '/about', element: <About />},
+  {path: '/services', element: <Services />}
 ]);
 
 function App() {
