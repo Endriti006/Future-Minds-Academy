@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="fma-general.css">
+    <link rel="stylesheet" href="fma-responsive.css">
+</head>
+<body style="background-color: rgb(181, 181, 181);">
+    <div class="container-fixed row-direction align-center p-5">
+        <div class="text-center p-2">
+            <h1>To-Do List</h1>
+        </div>
+        <div class="row gap-4 p-2">
+            <input type="text" placeholder="Add a new task" class="col-5 border">
+            <input type="date" class="btn-primary-rounded-white col-1">
+            <input type="time" class="btn-primary-rounded-white col-1">
+            <label class="col">
+                Important
+                <input type="checkbox" class="border">
+            </label>
+            <button class="btn-primary-rounded-white col-1">Add</button>
+        </div>
+        <div class="row gap-10 p-2">
+            <button class="btn-primary-rounded-white col">All</button>
+            <button class="btn-primary-rounded-white col">Yesterday</button>
+            <button class="btn-primary-rounded-white col">Today</button>
+            <button class="btn-primary-rounded-white col">Tomorrow</button>
+        </div>
+    </div>
+</body>
+</html>
