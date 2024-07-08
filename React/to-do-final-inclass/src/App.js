@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ToDoForm from './components/ToDoForm';
 import ToDoList from './components/ToDoList';
 import './App.css';
+import './assets/css/fma-general.css';
+import './assets/css/fma-responsive.css';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -39,23 +41,21 @@ function App() {
   const filterTasks = (filterType) => {
     setFilter(filterType);
     const today = new Date();
-    const yesterday = today.getDate() - 1;
-    const tomorrow = today.getDate() + 1;
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
 
     const filtered = tasks.filter((task) => {
       const taskDate = new Date(task.date);
       if (filterType === 'yesterday') {
-        return (
-          taskDate.toDateString() === new Date(today.setDate(yesterday)).toDateString()
-        );
+        return taskDate.toDateString() === yesterday.toDateString();
       } else if (filterType === 'today') {
         return taskDate.toDateString() === today.toDateString();
       } else if (filterType === 'tomorrow') {
-        return (
-          taskDate.toDateString() === new Date(today.setDate(tomorrow)).toDateString()
-        );
+        return taskDate.toDateString() === tomorrow.toDateString();
       } else {
-        return true;
+        return true; // Show all tasks for "All"
       }
     });
     setFilteredTasks(filtered);
@@ -63,10 +63,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>To-Do List</h1>
-        <ToDoForm addTask={addTask} />
-        <ToDoList tasks={filteredTasks.length ? filteredTasks : tasks} toggleCompleted={toggleCompleted} updateTask={updateTask} filterTasks={filterTasks} />
+      <header className="App-header wrapper-lg">
+        <h1 className='row just-center'>To-Do List</h1>
+        <div className='row just-between gap-2 row-tablet'>
+          <ToDoForm addTask={addTask} />
+          <ToDoList tasks={filteredTasks.length ? filteredTasks : tasks} toggleCompleted={toggleCompleted} updateTask={updateTask} filterTasks={filterTasks} />
+        </div>
       </header>
     </div>
   );
