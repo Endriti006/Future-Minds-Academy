@@ -46,23 +46,21 @@ function App() {
   const filterTasks = (filterType) => {
     setFilter(filterType);
     const today = new Date();
-    const yesterday = today.getDate() - 1;
-    const tomorrow = today.getDate() + 1;
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
 
     const filtered = tasks.filter((task) => {
       const taskDate = new Date(task.date);
       if (filterType === 'yesterday') {
-        return (
-          taskDate.toDateString() === new Date(today.setDate(yesterday)).toDateString()
-        );
+        return taskDate.toDateString() === yesterday.toDateString();
       } else if (filterType === 'today') {
         return taskDate.toDateString() === today.toDateString();
       } else if (filterType === 'tomorrow') {
-        return (
-          taskDate.toDateString() === new Date(today.setDate(tomorrow)).toDateString()
-        );
+        return taskDate.toDateString() === tomorrow.toDateString();
       } else {
-        return true;
+        return true; // Show all tasks for "All"
       }
     });
     setFilteredTasks(filtered);
@@ -74,7 +72,11 @@ function App() {
         <h1 className='row just-center'>To-Do List</h1>
         <div className='row just-between gap-2 row-tablet'>
           <ToDoForm addTask={addTask} />
+<<<<<<< HEAD
           <ToDoList tasks={filteredTasks.length ? filteredTasks : tasks} toggleCompleted={toggleCompleted} updateTask={updateTask} deleteTask={deleteTask} filterTasks={filterTasks} />
+=======
+          <ToDoList tasks={filteredTasks.length ? filteredTasks : tasks} toggleCompleted={toggleCompleted} updateTask={updateTask} filterTasks={filterTasks} />
+>>>>>>> 1cdcd8d6361c2ae1a5ddbed8f5e62c24dabb4896
         </div>
       </header>
     </div>
