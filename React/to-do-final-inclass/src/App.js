@@ -38,6 +38,11 @@ function App() {
     setTasks(newTasks);
   };
 
+  const deleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
+
   const filterTasks = (filterType) => {
     setFilter(filterType);
     const today = new Date();
@@ -67,7 +72,11 @@ function App() {
         <h1 className='row just-center'>To-Do List</h1>
         <div className='row just-between gap-2 row-tablet'>
           <ToDoForm addTask={addTask} />
+<<<<<<< HEAD
+          <ToDoList tasks={filteredTasks.length ? filteredTasks : tasks} toggleCompleted={toggleCompleted} updateTask={updateTask} deleteTask={deleteTask} filterTasks={filterTasks} />
+=======
           <ToDoList tasks={filteredTasks.length ? filteredTasks : tasks} toggleCompleted={toggleCompleted} updateTask={updateTask} filterTasks={filterTasks} />
+>>>>>>> 1cdcd8d6361c2ae1a5ddbed8f5e62c24dabb4896
         </div>
       </header>
     </div>
