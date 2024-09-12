@@ -22,8 +22,6 @@ app.get('/products/:id', (req, res) => {
 
 app.post('/products', (req, res) => {
   const { name, price } = req.body;
-  if (!name || !price) return res.status(400).send('Name and price are required');
-
   const newProduct = {
       id: products.length + 1,
       name,
