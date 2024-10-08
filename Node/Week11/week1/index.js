@@ -1,6 +1,19 @@
-import {add, subtract} from "./math.mjs";
 
+const inquirer = require('@inquirer/prompts')
 
-console.log("Add:", add(5,3));
-console.log("Subtract:", subtract(5,3));
+async function run(){
+    const name = await inquirer.input({
+        message:"Name"
+    });
+    const password = await inquirer.password({
+        message:"Password"
+    })
+
+    if(name=='admin' && password=='admin'){
+        console.log('you are admin')
+    }
+}
+
+run();
+
 
