@@ -1,3 +1,13 @@
+
+const http = require("http");
+
+const server = http.createServer(async (req, res) => {
+  res.write("hello from Endrit");
+  res.end();
+});
+
+server.listen(8585);
+
 const http = require('http')
 const fs = require("fs").promises;
 const path = require("path")
@@ -56,3 +66,4 @@ const PORT = 8080;
 server.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 });
+
