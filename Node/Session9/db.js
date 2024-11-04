@@ -1,0 +1,23 @@
+exports.users = [
+    {
+        id:1,
+        username:"admin",
+        password:"admin",
+        firstname:"Shaban",
+        lastname:"Fisteku"
+    },
+    {
+        id:2,
+        username:"test",
+        password:"test",
+        firstname:"Filan",
+        lastname:"Doe"
+    },
+    {
+        id:3,
+        username:"sec",
+        password:"sec",
+        firstname:"John",
+        lastname:"Musterman"
+    }
+]
