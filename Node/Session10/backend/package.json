@@ -1,0 +1,16 @@
+{
+  "name": "bookstore-backend",
+  "version": "1.0.0",
+  "description": "an express backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Endrit",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.9.0",
+    "express": "^4.21.1"
+  }
+}
