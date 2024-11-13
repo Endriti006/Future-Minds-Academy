@@ -1,25 +1,47 @@
+import { useCallback, useEffect, useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [books, setBooks] = useState([])
+
+  useEffect(() => {
+    getBooks()
+  }, [])
+
+  const getBooks = useCallback(async () => {
+    const response = await fetch("http://localhost:8585/books")
+    const json = await response.json()
+
+    if(json.success){
+      setBooks(json.data)
+    }
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ul>
+      {
+        books.map((b) => (
+          <BookRow key={b.id} book={b}></BookRow>
+        ))
+      }
+    </ul>
   );
 }
+
+const BookRow = ({ book }) => {
+  return (
+    <div className="book-row">
+      <div className="book-info">
+        <h3>{book.title}</h3>
+        <p><strong>Author:</strong> {book.author}</p>
+        <p><strong>Genre:</strong> {book.genre}</p>
+        <p><strong>Rating:</strong> {book.rating} / 5</p>
+      </div>
+    </div>
+  );
+};
+
 
 export default App;

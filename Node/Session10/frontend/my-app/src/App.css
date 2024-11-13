@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
+/* BookRow Component Styles */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.book-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.book-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes App-logo-spin {
+.book-info {
+  flex: 1;
+  padding-left: 16px;
+  color: #333;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.book-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #2a7ae4;
+}
+
+.book-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.book-info p strong {
+  color: #222;
+}
+
+.book-info p::before {
+  content: '📘';
+  margin-right: 6px;
+  opacity: 0;
+  animation: iconSlideIn 0.4s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

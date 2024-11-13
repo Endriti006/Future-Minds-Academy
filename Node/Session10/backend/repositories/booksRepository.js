@@ -223,16 +223,15 @@ exports.createBook = (book) =>{
 }
 
 
-exports.editBook = (id, book) =>{
-    let oldBook = this.getBookById(id);
-
-    if(oldBook){
-        oldBook = {id, ...book}
-        return oldBook
-    }
-
-    return null;
-}
+exports.editBook = (id, book) => {
+  const index = books.findIndex(b => b.id === id);
+  
+  if (index !== -1) {
+    books[index] = { ...books[index], ...book,};
+    return books[index];
+  }
+  return null;
+};
 
 exports.deleteBook = (id) =>{
     books = books.filter(b => b.id != id)
