@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const booksRepository = require('../repositories/booksRepository')
 const express = require('express')
+const authMiddleWare =require('../middleware/auth')
 
 router.use(express.json())
 
