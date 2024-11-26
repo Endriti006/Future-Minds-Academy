@@ -5,7 +5,7 @@ const authController = require('./controllers/authController');
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:3001",
+    origin: "http://localhost:3000",
     preflightContinue: true,
   })
 );
