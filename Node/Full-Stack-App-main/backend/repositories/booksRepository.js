@@ -1,4 +1,5 @@
 const { generateRandomString } = require("../utils");
+const {executeQuery} = require('./db')
 
 let books = [
   {
@@ -284,11 +285,16 @@ let books = [
 ];
 
 exports.getBookById = (id) => {
-  return books.find((b) => b.id == id);
+ let query = ''
 };
 
-exports.getAllBooks = () => {
-  return books;
+exports.getAllBooks = async () => {
+
+  let query = 'SELECT b.id, b.isbn, b.title, b.description, b.rating, a.fullName author, g.name genre FROM books b JOIN authors a ON b.authorId = a.id JOIN genres g ON b.genreId = g.id';
+
+  let results = await executeQuery(query)
+
+  return results;
 };
 
 exports.createBook = (book) => {

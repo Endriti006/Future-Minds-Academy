@@ -9,7 +9,7 @@ function BookDetails() {
 
   useEffect(() => {
     const getBookById = async () => {
-      const response = await fetch(`http://localhost:8586/books/${id}`);
+      const response = await fetch(`http://localhost:8585/books/${id}`);
       const json = await response.json();
 
       if (json.success) {

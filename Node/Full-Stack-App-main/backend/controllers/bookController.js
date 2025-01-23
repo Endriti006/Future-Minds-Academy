@@ -23,8 +23,8 @@ router.get("/:id", (req, res) => {
   });
 });
 
-router.get("/", (req, res) => {
-  const books = bookRepository.getAllBooks();
+router.get("/", async (req, res) => {
+  const books = await bookRepository.getAllBooks();
 
   res.status(200).json({
     success: true,
@@ -32,7 +32,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post("/",  (req, res) => {
+router.post("/", (req, res) => {
   let newBook = req.body;
   newBook = bookRepository.createBook(newBook);
   res.status(201).json({

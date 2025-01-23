@@ -15,7 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Navigate to="/books" replace />} />
         <Route path="/books" exact element={<App />} />
-        <Route path="/books/form" exact element={<BookForm />} />
+        <Route path="/books/form" element={<BookForm></BookForm>} />
         <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/login" element={<Login />} />
       </Routes>

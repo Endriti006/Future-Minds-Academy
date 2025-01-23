@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import './BookForm.css'
+import { useState } from 'react';
+import './BookForm.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function BookForm() {
-
+const BookForm = () => {
     const [bookData, setBookData] = useState({
         isbn: '',
         title: '',
@@ -11,41 +10,40 @@ export default function BookForm() {
         description: '',
         publishedAt: '',
         genre: '',
-        noOfPages: 0,
+        noOfPages: '',
         imageUrl: ''
-    })
+    });
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-
-    async function handleSubmit(e){
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const response = await fetch('http://localhost:8586/books', {
+        
+        const response = await fetch('http://localhost:8585/books', {
             method: 'post',
             headers: {
-              "Content-Type": "application/json"
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(bookData)
         });
 
         const json = await response.json();
-
-        if(!json.success){
-            alert('Couldnt create book');
+       
+        if (!json.success){
+            alert('Could not create book');
             return;
         }
 
-        const createBook = json.data
+        const createdBook = json.data;
 
-        navigate(`/books/${createBook.id}`)
-        
+        navigate(`/books/${createdBook.id}`);
     }
 
     return (
         <form onSubmit={handleSubmit}>
           <h1>Book Form</h1>
           <input
+            required
             type="text"
             name="isbn"
             value={bookData.isbn}
@@ -53,6 +51,7 @@ export default function BookForm() {
             placeholder="ISBN"
           />
           <input
+            required
             type="text"
             name="title"
             value={bookData.title}
@@ -60,6 +59,7 @@ export default function BookForm() {
             placeholder="Title"
           />
           <input
+            required
             type="text"
             name="author"
             value={bookData.author}
@@ -67,6 +67,7 @@ export default function BookForm() {
             placeholder="Author"
           />
           <input
+            required
             type="text"
             name="description"
             value={bookData.description}
@@ -76,6 +77,7 @@ export default function BookForm() {
             placeholder="Description"
           />
           <input
+            required
             type="date"
             name="publishedAt"
             value={bookData.publishedAt}
@@ -102,6 +104,7 @@ export default function BookForm() {
             <option value="fiction">Fiction</option>
           </select>
           <input
+            required
             type="number"
             name="noOfPages"
             value={bookData.noOfPages}
@@ -109,6 +112,7 @@ export default function BookForm() {
             placeholder="Number of Pages"
           />
           <input
+            required
             type="url"
             name="imageUrl"
             value={bookData.imageUrl}
@@ -121,3 +125,5 @@ export default function BookForm() {
         </form>
       );
 }
+
+export default BookForm;

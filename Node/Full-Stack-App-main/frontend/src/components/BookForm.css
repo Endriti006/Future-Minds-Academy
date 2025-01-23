@@ -1,3 +1,5 @@
+
+  
   form {
     background: #ffffff;
     border-radius: 12px;
@@ -24,9 +26,9 @@
   
   input:focus,
   select:focus {
-    border-color: #6c63ff;
+    border-color: #2a7ae4;
     outline: none;
-    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+    box-shadow: 0 0 5px rgba(31, 76, 237, 0.5);
   }
   
   input::placeholder {
@@ -38,7 +40,7 @@
   }
   
   button {
-    background-color: #6c63ff;
+    background-color: #2a7ae4;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
@@ -46,7 +48,7 @@
   }
   
   button:hover {
-    background-color: #574dcf;
+    background-color: #0b5fcc;
   }
   
   button:active {
@@ -70,4 +72,3 @@
       width: 90%;
     }
   }
-  
